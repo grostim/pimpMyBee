@@ -46,11 +46,11 @@ APP_SW_VERSION            	?= 7
 # Attrib: 0x0003 (UINT8)
 HW_VERSION                	?= 1
 # Attrib: 0x0004 (String - 32 bytes max)
-MANUFACTURER_NAME         	?= NXP
+MANUFACTURER_NAME         	?= PimpMyBee
 # Attrib: 0x0005 (String - 32 bytes max)
 MODEL_ID                  	?= $(DR)
 # Attrib: 0x0006 (String - 16 bytes max)
-DATE_CODE                 	?= 10-31-2014
+DATE_CODE                   ?= 2020-01-20
 
 # When set to one the following variable causes the light output to ramp up 
 # and down periodically when the device is in the factory new state. When set 

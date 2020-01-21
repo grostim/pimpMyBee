@@ -6,7 +6,7 @@
  *
  * COMPONENT:      os_gen.c
  *
- * DATE:           Mon Jan 20 23:08:10 2020
+ * DATE:           Mon Jan 20 23:18:40 2020
  *
  * AUTHOR:         Jennic RTOS Configuration Tool
  *
@@ -129,14 +129,16 @@ struct _os_tsSWTimer {
 /* Module ZBPro */
 
 /* Module JN_AN_1189_ZigBee_HomeAutomation_Demo */
-PUBLIC void os_vTick_Task(void);
-PUBLIC void os_vDriverOutlet_vButtonScanTask(void);
+PUBLIC void os_vAPP_ButtonsScanTask(void);
 PUBLIC void os_vZCL_Task(void);
-PUBLIC void os_vAPP_ZPR_Outlet_Task(void);
+PUBLIC void os_vAPP_ZPR_Light_Task(void);
 PUBLIC void os_vzps_taskZPS(void);
-PUBLIC void os_vAPP_AgeOutChildren(void);
-PUBLIC void os_vApp_TimeReadJitterTask(void);
 PUBLIC void os_vAPP_vManagePowerOnCount(void);
+PUBLIC void os_vAPP_AgeOutChildren(void);
+PUBLIC void os_vTick_Task(void);
+PUBLIC void os_vAPP_RadioRecal(void);
+PUBLIC void os_vOTA_MsTask(void);
+PUBLIC void os_vAPP_PollTask(void);
 
 PUBLIC bool os_bAPP_cbSetTickTimerCompare(uint32 );
 PUBLIC uint32 os_u32APP_cbGetTickTimer(void);
@@ -149,6 +151,8 @@ PRIVATE bool os_bStrictCheck(void * , void * , void *, unsigned int );
 PUBLIC void os_vzps_isrMAC(void);
 PUBLIC void os_vAPP_isrTickTimer(void);
 PUBLIC void os_vvISR_SystemController(void);
+PUBLIC void os_vvISR_Timer3(void);
+PUBLIC void os_vvISR_Timer4(void);
 PUBLIC uint32 OS_u32GetQueueSize(void * );
 
 /****************************************************************************/
@@ -157,20 +161,21 @@ PUBLIC uint32 OS_u32GetQueueSize(void * );
 
 
 /* Tasks */
-struct _os_tsTask os_Task_Tick_Task = { OS_TASK_MAGIC, 8, 8, 0, os_vTick_Task };
-struct _os_tsTask os_Task_DriverOutlet_vButtonScanTask = { OS_TASK_MAGIC, 3, 7, 0, os_vDriverOutlet_vButtonScanTask };
-struct _os_tsTask os_Task_ZCL_Task = { OS_TASK_MAGIC, 6, 7, 0, os_vZCL_Task };
-struct _os_tsTask os_Task_APP_ZPR_Outlet_Task = { OS_TASK_MAGIC, 7, 7, 0, os_vAPP_ZPR_Outlet_Task };
-struct _os_tsTask os_Task_zps_taskZPS = { OS_TASK_MAGIC, 4, 7, 0, os_vzps_taskZPS };
-struct _os_tsTask os_Task_APP_AgeOutChildren = { OS_TASK_MAGIC, 5, 7, 0, os_vAPP_AgeOutChildren };
-struct _os_tsTask os_Task_App_TimeReadJitterTask = { OS_TASK_MAGIC, 2, 7, 0, os_vApp_TimeReadJitterTask };
-struct _os_tsTask os_Task_APP_vManagePowerOnCount = { OS_TASK_MAGIC, 1, 7, 0, os_vAPP_vManagePowerOnCount };
+struct _os_tsTask os_Task_APP_ButtonsScanTask = { OS_TASK_MAGIC, 3, 10, 0, os_vAPP_ButtonsScanTask };
+struct _os_tsTask os_Task_ZCL_Task = { OS_TASK_MAGIC, 8, 10, 0, os_vZCL_Task };
+struct _os_tsTask os_Task_APP_ZPR_Light_Task = { OS_TASK_MAGIC, 9, 10, 0, os_vAPP_ZPR_Light_Task };
+struct _os_tsTask os_Task_zps_taskZPS = { OS_TASK_MAGIC, 4, 10, 0, os_vzps_taskZPS };
+struct _os_tsTask os_Task_APP_vManagePowerOnCount = { OS_TASK_MAGIC, 1, 10, 0, os_vAPP_vManagePowerOnCount };
+struct _os_tsTask os_Task_APP_AgeOutChildren = { OS_TASK_MAGIC, 5, 10, 0, os_vAPP_AgeOutChildren };
+struct _os_tsTask os_Task_Tick_Task = { OS_TASK_MAGIC, 10, 10, 0, os_vTick_Task };
+struct _os_tsTask os_Task_APP_RadioRecal = { OS_TASK_MAGIC, 6, 10, 1, os_vAPP_RadioRecal };
+struct _os_tsTask os_Task_OTA_MsTask = { OS_TASK_MAGIC, 7, 10, 0, os_vOTA_MsTask };
+struct _os_tsTask os_Task_APP_PollTask = { OS_TASK_MAGIC, 2, 10, 0, os_vAPP_PollTask };
 
 /* Mutexs */
-tsMutex os_Mutex_mutexZPS = { OS_MUTEX_MAGIC, 8, 0, 0xff, 0xff };
-tsMutex os_Mutex_mutexPDUM = { OS_MUTEX_MAGIC, 8, 0, 0xff, 0xff };
-tsMutex os_Mutex_mutexMAC = { OS_MUTEX_MAGIC, 8, 7, 0xff, 0xff };
-tsMutex os_Mutex_HA = { OS_MUTEX_MAGIC, 8, 0, 0xff, 0xff };
+tsMutex os_Mutex_mutexMAC = { OS_MUTEX_MAGIC, 10, 7, 0xff, 0xff };
+tsMutex os_Mutex_mutexZPS = { OS_MUTEX_MAGIC, 10, 0, 0xff, 0xff };
+tsMutex os_Mutex_mutexPDUM = { OS_MUTEX_MAGIC, 10, 0, 0xff, 0xff };
 
 /* Messages */
 PRIVATE MAC_tsMlmeVsDcfmInd s_aMessageData_zps_msgMlmeDcfmInd[8];
@@ -231,42 +236,42 @@ tsMessage os_Message_zps_msgMcpsDcfm = {
 
 
 /* Messages */
-PRIVATE ZPS_tsAfEvent s_aMessageData_APP_msgZpsEvents[5];
+PRIVATE ZPS_tsAfEvent s_aMessageData_APP_msgZpsEvents[1];
 tsMessage os_Message_APP_msgZpsEvents = {
     OS_MESSAGE_MAGIC,
     s_aMessageData_APP_msgZpsEvents,
     0,
     0,
     0,
-    5,
+    1,
     sizeof(ZPS_tsAfEvent),
-    &os_Task_APP_ZPR_Outlet_Task,
+    &os_Task_APP_ZPR_Light_Task,
     4,
     0
 };
 
-PRIVATE APP_tsEvent s_aMessageData_APP_msgEvents[4];
+PRIVATE APP_tsEvent s_aMessageData_APP_msgEvents[1];
 tsMessage os_Message_APP_msgEvents = {
     OS_MESSAGE_MAGIC,
     s_aMessageData_APP_msgEvents,
     0,
     0,
     0,
-    4,
+    1,
     sizeof(APP_tsEvent),
-    &os_Task_APP_ZPR_Outlet_Task,
+    &os_Task_APP_ZPR_Light_Task,
     3,
     0
 };
 
-PRIVATE ZPS_tsAfEvent s_aMessageData_APP_msgZpsEvents_ZCL[5];
+PRIVATE ZPS_tsAfEvent s_aMessageData_APP_msgZpsEvents_ZCL[1];
 tsMessage os_Message_APP_msgZpsEvents_ZCL = {
     OS_MESSAGE_MAGIC,
     s_aMessageData_APP_msgZpsEvents_ZCL,
     0,
     0,
     0,
-    5,
+    1,
     sizeof(ZPS_tsAfEvent),
     &os_Task_ZCL_Task,
     4,
@@ -282,8 +287,8 @@ tsMessage os_Message_APP_msgPOREvents = {
     0,
     1,
     sizeof(APP_tsEvent),
-    &os_Task_APP_ZPR_Outlet_Task,
-    8,
+    &os_Task_APP_ZPR_Light_Task,
+    1,
     0
 };
 
@@ -291,14 +296,16 @@ tsMessage os_Message_APP_msgPOREvents = {
 
 /* Timers connected to 'APP_cntrTickTimer' */
 tsHWCounter os_HWCounter_APP_cntrTickTimer = { OS_HWCOUNTER_MAGIC, NULL, os_bAPP_cbSetTickTimerCompare, os_u32APP_cbGetTickTimer, os_vAPP_cbEnableTickTimer, os_vAPP_cbDisableTickTimer, 0 };
-tsSWTimer os_SWTimer_APP_cntrTickTimer_DriverOutlet_ButtonScanTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_DriverOutlet_vButtonScanTask, 0, OS_E_SWTIMER_STOPPED, FALSE };
+tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_ButtonsScanTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_ButtonsScanTask, 0, OS_E_SWTIMER_STOPPED, FALSE };
 tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_TickTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_Tick_Task, 0, OS_E_SWTIMER_STOPPED, FALSE };
-tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_JoinTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_ZPR_Outlet_Task, 0, OS_E_SWTIMER_STOPPED, FALSE };
-tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_AgeOutChildrenTmr = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_AgeOutChildren, 0, OS_E_SWTIMER_STOPPED, FALSE };
-tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_BackOffTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_ZPR_Outlet_Task, 0, OS_E_SWTIMER_STOPPED, FALSE };
-tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_StartUPTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_ZPR_Outlet_Task, 0, OS_E_SWTIMER_STOPPED, FALSE };
-tsSWTimer os_SWTimer_APP_cntrTickTimer_App_TimeReadJitterTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_App_TimeReadJitterTask, 0, OS_E_SWTIMER_STOPPED, FALSE };
+tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_RadioRecalTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_RadioRecal, 0, OS_E_SWTIMER_STOPPED, FALSE };
+tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_JoinTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_ZPR_Light_Task, 0, OS_E_SWTIMER_STOPPED, FALSE };
 tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_PowerOnCountTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_vManagePowerOnCount, 0, OS_E_SWTIMER_STOPPED, FALSE };
+tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_AgeOutChildrenTmr = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_AgeOutChildren, 0, OS_E_SWTIMER_STOPPED, FALSE };
+tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_BackOffTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_ZPR_Light_Task, 0, OS_E_SWTIMER_STOPPED, FALSE };
+tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_StartUPTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_ZPR_Light_Task, 0, OS_E_SWTIMER_STOPPED, FALSE };
+tsSWTimer os_SWTimer_APP_cntrTickTimer_OTA_MsTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_OTA_MsTask, 0, OS_E_SWTIMER_STOPPED, FALSE };
+tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_PollTimer = { OS_SWTIMER_MAGIC, NULL, &os_HWCounter_APP_cntrTickTimer, NULL, &os_Task_APP_PollTask, 0, OS_E_SWTIMER_STOPPED, FALSE };
 
 /****************************************************************************/
 /***        Local Variables                                               ***/
@@ -307,12 +314,14 @@ tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_PowerOnCountTimer = { OS_SWTIMER_MAGI
 /* Task Table */
 PRIVATE struct _os_tsTask *s_asTasks[] = {
     &os_Task_APP_vManagePowerOnCount,
-    &os_Task_App_TimeReadJitterTask,
-    &os_Task_DriverOutlet_vButtonScanTask,
+    &os_Task_APP_PollTask,
+    &os_Task_APP_ButtonsScanTask,
     &os_Task_zps_taskZPS,
     &os_Task_APP_AgeOutChildren,
+    &os_Task_APP_RadioRecal,
+    &os_Task_OTA_MsTask,
     &os_Task_ZCL_Task,
-    &os_Task_APP_ZPR_Outlet_Task,
+    &os_Task_APP_ZPR_Light_Task,
     &os_Task_Tick_Task,
 };
 
@@ -341,7 +350,7 @@ PUBLIC void OS_vStart(void (*prvInitFunction)(void), void (*prvUnclaimedISR)(voi
     asm("b.addi r0,r0,OS_Version_1v2" : );
     asm(".extern APP_TIMER_Version_1v0" : ) ;
     asm("b.addi r0,r0,APP_TIMER_Version_1v0" : );
-    os_vStart(prvInitFunction, prvUnclaimedISR, prvErrorHook, os_bStrictCheck, 0x00000000, s_asTasks, 12, os_OSMIUM_HwVectTable, os_PIC_ChannelPriorities);
+    os_vStart(prvInitFunction, prvUnclaimedISR, prvErrorHook, os_bStrictCheck, 0x04000000, s_asTasks, 15, os_OSMIUM_HwVectTable, os_PIC_ChannelPriorities);
 }
 
 PUBLIC void OS_vRestart(void)
@@ -403,7 +412,7 @@ PRIVATE bool os_bStrictCheck(void *hTask, void *prvISR, void *hObject, unsigned 
     }
     else if (hTask)
     {
-        if (hTask == &os_Task_Tick_Task)
+        if (hTask == &os_Task_APP_ButtonsScanTask)
         {
             if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
             {
@@ -412,37 +421,6 @@ PRIVATE bool os_bStrictCheck(void *hTask, void *prvISR, void *hObject, unsigned 
                     bOK = TRUE;
                 }            
                 if (hObject == &os_Mutex_mutexPDUM)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_mutexMAC)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_HA)
-                {
-                    bOK = TRUE;
-                }            
-            }
-
-            if (*((uint32 *)hObject) == OS_MESSAGE_MAGIC)
-            {
-                if (OS_DIR_POST == uDir)
-                {
-                    if (hObject == &os_Message_APP_msgPOREvents)
-                    {
-                        bOK = TRUE;
-                    }            
-                }
-            }
-
-        }
-
-        if (hTask == &os_Task_DriverOutlet_vButtonScanTask)
-        {
-            if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
-            {
-                if (hObject == &os_Mutex_HA)
                 {
                     bOK = TRUE;
                 }            
@@ -465,19 +443,15 @@ PRIVATE bool os_bStrictCheck(void *hTask, void *prvISR, void *hObject, unsigned 
         {
             if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
             {
+                if (hObject == &os_Mutex_mutexMAC)
+                {
+                    bOK = TRUE;
+                }            
                 if (hObject == &os_Mutex_mutexZPS)
                 {
                     bOK = TRUE;
                 }            
                 if (hObject == &os_Mutex_mutexPDUM)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_mutexMAC)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_HA)
                 {
                     bOK = TRUE;
                 }            
@@ -496,23 +470,19 @@ PRIVATE bool os_bStrictCheck(void *hTask, void *prvISR, void *hObject, unsigned 
 
         }
 
-        if (hTask == &os_Task_APP_ZPR_Outlet_Task)
+        if (hTask == &os_Task_APP_ZPR_Light_Task)
         {
             if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
             {
+                if (hObject == &os_Mutex_mutexMAC)
+                {
+                    bOK = TRUE;
+                }            
                 if (hObject == &os_Mutex_mutexZPS)
                 {
                     bOK = TRUE;
                 }            
                 if (hObject == &os_Mutex_mutexPDUM)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_mutexMAC)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_HA)
                 {
                     bOK = TRUE;
                 }            
@@ -543,19 +513,15 @@ PRIVATE bool os_bStrictCheck(void *hTask, void *prvISR, void *hObject, unsigned 
         {
             if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
             {
+                if (hObject == &os_Mutex_mutexMAC)
+                {
+                    bOK = TRUE;
+                }            
                 if (hObject == &os_Mutex_mutexZPS)
                 {
                     bOK = TRUE;
                 }            
                 if (hObject == &os_Mutex_mutexPDUM)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_mutexMAC)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_HA)
                 {
                     bOK = TRUE;
                 }            
@@ -597,56 +563,24 @@ PRIVATE bool os_bStrictCheck(void *hTask, void *prvISR, void *hObject, unsigned 
 
         }
 
-        if (hTask == &os_Task_APP_AgeOutChildren)
-        {
-            if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
-            {
-                if (hObject == &os_Mutex_mutexZPS)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_mutexPDUM)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_mutexMAC)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_HA)
-                {
-                    bOK = TRUE;
-                }            
-            }
-
-        }
-
-        if (hTask == &os_Task_App_TimeReadJitterTask)
-        {
-            if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
-            {
-                if (hObject == &os_Mutex_mutexZPS)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_mutexPDUM)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_mutexMAC)
-                {
-                    bOK = TRUE;
-                }            
-                if (hObject == &os_Mutex_HA)
-                {
-                    bOK = TRUE;
-                }            
-            }
-
-        }
-
         if (hTask == &os_Task_APP_vManagePowerOnCount)
         {
+            if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
+            {
+                if (hObject == &os_Mutex_mutexMAC)
+                {
+                    bOK = TRUE;
+                }            
+                if (hObject == &os_Mutex_mutexZPS)
+                {
+                    bOK = TRUE;
+                }            
+                if (hObject == &os_Mutex_mutexPDUM)
+                {
+                    bOK = TRUE;
+                }            
+            }
+
             if (*((uint32 *)hObject) == OS_MESSAGE_MAGIC)
             {
                 if (OS_DIR_POST == uDir)
@@ -656,6 +590,86 @@ PRIVATE bool os_bStrictCheck(void *hTask, void *prvISR, void *hObject, unsigned 
                         bOK = TRUE;
                     }            
                 }
+            }
+
+        }
+
+        if (hTask == &os_Task_APP_AgeOutChildren)
+        {
+            if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
+            {
+                if (hObject == &os_Mutex_mutexMAC)
+                {
+                    bOK = TRUE;
+                }            
+                if (hObject == &os_Mutex_mutexZPS)
+                {
+                    bOK = TRUE;
+                }            
+                if (hObject == &os_Mutex_mutexPDUM)
+                {
+                    bOK = TRUE;
+                }            
+            }
+
+        }
+
+        if (hTask == &os_Task_Tick_Task)
+        {
+            if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
+            {
+                if (hObject == &os_Mutex_mutexMAC)
+                {
+                    bOK = TRUE;
+                }            
+                if (hObject == &os_Mutex_mutexZPS)
+                {
+                    bOK = TRUE;
+                }            
+                if (hObject == &os_Mutex_mutexPDUM)
+                {
+                    bOK = TRUE;
+                }            
+            }
+
+        }
+
+        if (hTask == &os_Task_APP_RadioRecal)
+        {
+            if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
+            {
+                if (hObject == &os_Mutex_mutexMAC)
+                {
+                    bOK = TRUE;
+                }            
+                if (hObject == &os_Mutex_mutexZPS)
+                {
+                    bOK = TRUE;
+                }            
+                if (hObject == &os_Mutex_mutexPDUM)
+                {
+                    bOK = TRUE;
+                }            
+            }
+
+        }
+
+        if (hTask == &os_Task_APP_PollTask)
+        {
+            if (*((uint32 *)hObject) == OS_MUTEX_MAGIC)
+            {
+                if (hObject == &os_Mutex_mutexMAC)
+                {
+                    bOK = TRUE;
+                }            
+                if (hObject == &os_Mutex_mutexZPS)
+                {
+                    bOK = TRUE;
+                }            
+                if (hObject == &os_Mutex_mutexPDUM)
+                {
+                    bOK = TRUE;
+                }            
             }
 
         }

@@ -4,13 +4,13 @@
 #
 # MODULE:         OS
 #
-# COMPONENT:      os_irq_illegalinstruction.s
+# COMPONENT:      os_irq_stackoverflowexception.s
 #
-# DATE:           Mon Jan 20 23:08:10 2020
+# DATE:           Mon Jan 20 23:18:40 2020
 #
 # AUTHOR:         Jennic RTOS Configuration Tool
 #
-# DESCRIPTION:    Wrapper for uncontrolled 'IllegalInstruction' exception. Calls a C Function
+# DESCRIPTION:    Wrapper for uncontrolled 'StackOverflowException' exception. Calls a C Function
 #                 to handle the exception.
 #
 #==============================================================================
@@ -33,16 +33,16 @@
 #
 #==============================================================================
 
-    .globl IRQ_IllegalInstruction
+    .globl IRQ_StackOverflowException
     .extern os_CFunc_W
-IRQ_IllegalInstruction:
-    .extern os_vAPP_isrIllegalInstruction
+IRQ_StackOverflowException:
+    .extern os_vAPP_isrStackOverflowException
     b.addi r1,r1,-(0xc)
     b.sw   0(r1),r9
     b.sw   4(r1),r5
     bw.mfspr r9,r0,0x20
     bw.sw  8(r1),r9
-    b.ori  r5,r0,os_vAPP_isrIllegalInstruction
+    b.ori  r5,r0,os_vAPP_isrStackOverflowException
     b.jal  os_CFunc_W
     b.lwz  r9,0(r1)
     b.lwz  r5,4(r1)

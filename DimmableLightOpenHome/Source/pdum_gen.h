@@ -6,7 +6,7 @@
  *
  * COMPONENT:      pdum_gen.h
  *
- * DATE:           Mon Jan 20 23:08:13 2020
+ * DATE:           Mon Jan 20 23:18:43 2020
  *
  * AUTHOR:         Jennic PDU Manager Configuration Tool
  *
