@@ -1,4 +1,4 @@
- Most parts of these firmware are covered by the license granted by NXP when using there sample code from JN-AN-1189 :
+ Most parts of these firmware are covered by the license granted by NXP when using the sample code provided in JN-AN-1189 :
  
  ```c
  *****************************************************************************
