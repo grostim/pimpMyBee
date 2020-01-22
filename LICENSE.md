@@ -1,5 +1,6 @@
  Most parts of these firmware are covered by the license granted by NXP when using there sample code from JN-AN-1189 :
  
+ ```c
  *****************************************************************************
  *
  * This software is owned by NXP B.V. and/or its supplier and is protected
@@ -26,3 +27,4 @@
  * Copyright NXP B.V. 2012. All rights reserved
  *
  ****************************************************************************/
+ ```
