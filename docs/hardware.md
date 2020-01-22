@@ -33,5 +33,25 @@ And you will find below some examples of this connector in the xiaomi devices:
 ![](https://i2.wp.com/faire-ca-soi-meme.fr/wp-content/uploads/2017/02/pin_JN5169.jpg?w=371)
 >Xiaomi temperature and humidity sensor (WSDCGQ01LM)
 
-![](https://reho.st/medium/https://lh3.googleusercontent.com/lVRcHyYeesE0HHpkHVFRHHTjuAQFc94MYWnX5g0FsZwa89conzcIZmzghf9C4QCdje8yWStq5I51JhmCfNcbfFeltKDz-t7eI1SRKXJYYdra5XJfH5rTT-GAooOZ7fBA1B6oKNPMd3F7ZMYviP2fzTGtvuqmGi1rnbxO0aufZUtrYxMypA-zf54EW-hFE3L0gMGmwfJIU5jsLa40A3m3BKiI5w9eArrAMfQMy-0n1LbAAwwLLY7CszvLJwCOYnTpvvFv3pKm5yv7OSc_IihX8ezBs5sGsuv6t00yVUGc2lGzjA6mjhXVjVsj0XZDJbDlgbUaqg0merwtrYerIB4HiTqd91XYBLby8pututIPVY2LweEhWHvp7lntkLh9_rFQfPRFCg-HvE7yV3q8FyeSes6ViZNjjVXg8fdtpfd2wpcVOmDB5iooOnTtOO1qk2GRbafXq6jIh8_bJnqrGbZVVraceDIKB8TY3iKmrnwI-83HZ6rnWiPssf2YxMByhB0r1brgtjHEzHVF02lzJwKVVHVO9kv2F92D1yKrcBOOQIKiylXCHy59uWwb7HwzsTe-w37DVwZeffjPdl_RsOwooLjfHM5i8Zm2D4I_EA8FPlWCFvYg-xlfomnRXDsza02Mdrgwv7tfPaNfUL09-feQp11kMgAqZKzO_bMQJw9qG0HxB1oLB-k7wos=w800-h600-no)
+![](https://reho.st/medium/https://lh3.googleusercontent.com/hnhe13Uu22iNSJHEwouhv_imEOF6m43YmDjfyei6V8hDm0TDgiHCEkZ6k-Dov3HOQzGVC4T8ohX8mMrZa4IvIWhF3c9EfjpKJF34-9bM24KkX0a6nEmNvpgOlsSEn1orOQSLYe4Aj03298I7O5vWlG7nfwHqU-YgOFKvao9O2euxM4BOvG8Ch73J7c1L5pUKPfg2ctR9qec0RkSl9TYCLEBD2z-ayWQXMjGeGw-uU3Co-M1cBlBD2qT4pMOlcTMo4_U4tRDn_jDhrRbfpaIW9POFkxoVjjvJlp28gzkPoouEzUk1LVR4msU_WBAx816R4Avb59-rgw-4bDNNwbLDhifQ343Hue8z2IcfRooDFWfmcDSIkkQlGmVJWuKzJHknYYjxVjncwD4g1DjfYS_PIZvlMNqJtcceekKJdk3h-iyBO97pvU4PhFZnSOF-0XlXtT9vxFmjmrbOL8RgvMuRCFy51Zw4XkoQ7PdK48mqh6YuiLE6IDBu6ihFRO4SVvlfMNIf-WRONRWe9Yh1FKp0t2oFdqomZqjKNXWeLXEeR3wjSaEmS2ojehcQkDcXVQ2n2VUNpBL22Y5bzfNcVYSOTsR1T6POAIcAm_s6_LFXMoflBuqcWp8myhgr5bsw4yKsElbof_hosSj28v6hxcfMrtX2O3u3whhEF8LBpNZjkd3NIjD4fDhwJrY=w916-h1626-no)
 >Xiaomi Gateway V1
+
+## Physical connection to the serial interface.
+
+Several options are available.
+
+### direct welding
+Depending on the pitch between each pad of the connector, this may be quite easy or very difficult.
+Some very fine wire might be required for the devices with 1.27mm pitch (most small devices)
+![](https://reho.st/medium/https://lh3.googleusercontent.com/A0tZ627IYzesw4NHzBaI7ok1P7BfP4gIL4yDwzjY60Oe68NfbwAFJUqjEli2lcpB4lEPOrh4ZRzJUVe_hC_KgtbDoh0xSDSU9IYRkVwGuhPqZCeSFj3jJc_ODasG79MpmCfpTsTw1z0ly0zpHjJ6l5TLtAd1XEMS9V9VVTdfO7MEnrtUULn86ukYTUf5PAsAKEliybwmfyzuP0re9nvdKnnlM7hlytHAzxQwH1AK3Nqb-eDTWmiSuFo381ZOl740xQdjxlsCTuN3GPhsXZT1UQPZt053F9xv1lwPWiZ4BWU73RT8theiKgYc7QaVQIj5o62dzxEJ-GAi39mo5kcNr4Sw-ayPPLBLi5GCHmbToqojNKwFjnxXGfEpmtFKuEKPRwJge48i211z1Bh1HzA8jzGzPJ-bPU7wdy_slmQ1wVqN5cqdyLmT2uKeeCs5qOLPrXAIknVDJhPWdEp3eVr6wSI4Hxz4OAuaxcIKy4eMzbwcEfSXp5JxSGCiErFexJ0Ex1jU36FArx-y_7JzBljuptnUdXQ3gdVAv6GVCEXYvDpShHUaVVho_1wGkD9UJK2BEaucHQuHiF4sBBZU1K1_6QPQUuOLh4pU5bburHr5KbA23b2SR5x_NCsZVVIWFa_G8SR6O_YN1IYhxn89Zv8-McjkWHdstK3jqpPz6A4yIUICCE6YXQC__q8=w2892-h1626-no)
+>My ugly weldings on the Gateway (2mm pitch)
+
+![](https://github.com/Jerome-PS/JN516xSniffer/raw/master/doc/Xiaomi_Door_sensor.JPG)
+>Weldings on an Aqara door sensor (1.27mm pitch)
+
+### Clips
+
+Using [this clip](https://amzn.to/2GgbbQS), you can arrange an easy connection the pads as long as they are spaced 1.27mm away.
+
+### pogo pins
+This is an option that i have not investigates yet, but i am pretty sure a custom connector based on pogo pins could be made for each type of sensor.
