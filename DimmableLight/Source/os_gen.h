@@ -6,7 +6,7 @@
  *
  * COMPONENT:      os_gen.h
  *
- * DATE:           Wed Jan 22 10:36:48 2020
+ * DATE:           Wed Jan 22 09:40:56 2020
  *
  * AUTHOR:         Jennic RTOS Configuration Tool
  *
@@ -49,10 +49,9 @@
 /* Module ZBPro */
 
 /* Mutex Handles */
+#define mutexMAC ((OS_thMutex)&os_Mutex_mutexMAC)
 #define mutexZPS ((OS_thMutex)&os_Mutex_mutexZPS)
 #define mutexPDUM ((OS_thMutex)&os_Mutex_mutexPDUM)
-#define mutexMAC ((OS_thMutex)&os_Mutex_mutexMAC)
-#define HA ((OS_thMutex)&os_Mutex_HA)
 
 /* Message Handles */
 #define zps_msgMlmeDcfmInd ((OS_thMessage)&os_Message_zps_msgMlmeDcfmInd)
@@ -66,17 +65,17 @@
 
 /* Module JN_AN_1189_ZigBee_HomeAutomation_Demo */
 
-/* Task Handles */
-#define Tick_Task ((OS_thTask)&os_Task_Tick_Task)
-
 /* Cooperative Task Handles */
-#define DriverOutlet_vButtonScanTask ((OS_thTask)&os_Task_DriverOutlet_vButtonScanTask)
+#define APP_ButtonsScanTask ((OS_thTask)&os_Task_APP_ButtonsScanTask)
 #define ZCL_Task ((OS_thTask)&os_Task_ZCL_Task)
-#define APP_ZPR_Outlet_Task ((OS_thTask)&os_Task_APP_ZPR_Outlet_Task)
+#define APP_ZPR_Light_Task ((OS_thTask)&os_Task_APP_ZPR_Light_Task)
 #define zps_taskZPS ((OS_thTask)&os_Task_zps_taskZPS)
-#define APP_AgeOutChildren ((OS_thTask)&os_Task_APP_AgeOutChildren)
-#define App_TimeReadJitterTask ((OS_thTask)&os_Task_App_TimeReadJitterTask)
 #define APP_vManagePowerOnCount ((OS_thTask)&os_Task_APP_vManagePowerOnCount)
+#define APP_AgeOutChildren ((OS_thTask)&os_Task_APP_AgeOutChildren)
+#define Tick_Task ((OS_thTask)&os_Task_Tick_Task)
+#define APP_RadioRecal ((OS_thTask)&os_Task_APP_RadioRecal)
+#define OTA_MsTask ((OS_thTask)&os_Task_OTA_MsTask)
+#define APP_PollTask ((OS_thTask)&os_Task_APP_PollTask)
 
 /* Message Handles */
 #define APP_msgZpsEvents ((OS_thMessage)&os_Message_APP_msgZpsEvents)
@@ -90,14 +89,16 @@
 
 /* Timer Handles */
 #define APP_cntrTickTimer ((OS_thHWCounter)&os_HWCounter_APP_cntrTickTimer)
-#define DriverOutlet_ButtonScanTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_DriverOutlet_ButtonScanTimer)
+#define APP_ButtonsScanTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_APP_ButtonsScanTimer)
 #define APP_TickTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_APP_TickTimer)
+#define APP_RadioRecalTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_APP_RadioRecalTimer)
 #define APP_JoinTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_APP_JoinTimer)
+#define APP_PowerOnCountTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_APP_PowerOnCountTimer)
 #define APP_AgeOutChildrenTmr ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_APP_AgeOutChildrenTmr)
 #define APP_BackOffTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_APP_BackOffTimer)
 #define APP_StartUPTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_APP_StartUPTimer)
-#define App_TimeReadJitterTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_App_TimeReadJitterTimer)
-#define APP_PowerOnCountTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_APP_PowerOnCountTimer)
+#define OTA_MsTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_OTA_MsTimer)
+#define APP_PollTimer ((OS_thSWTimer)&os_SWTimer_APP_cntrTickTimer_APP_PollTimer)
 
 /* Module Exceptions */
 
@@ -113,10 +114,9 @@ typedef void (*OS_tprISR)(void);
 
 
 /* Mutex Handles */
+extern struct _os_tsMutex os_Mutex_mutexMAC;
 extern struct _os_tsMutex os_Mutex_mutexZPS;
 extern struct _os_tsMutex os_Mutex_mutexPDUM;
-extern struct _os_tsMutex os_Mutex_mutexMAC;
-extern struct _os_tsMutex os_Mutex_HA;
 
 /* Message Handles */
 extern struct _os_tsMessage os_Message_zps_msgMlmeDcfmInd;
@@ -124,17 +124,17 @@ extern struct _os_tsMessage os_Message_zps_msgTimeEvents;
 extern struct _os_tsMessage os_Message_zps_msgMcpsDcfmInd;
 extern struct _os_tsMessage os_Message_zps_msgMcpsDcfm;
 
-/* Task Handles */
-extern struct _os_tsTask os_Task_Tick_Task;
-
 /* Cooperative Task Handles */
-extern struct _os_tsTask os_Task_DriverOutlet_vButtonScanTask;
+extern struct _os_tsTask os_Task_APP_ButtonsScanTask;
 extern struct _os_tsTask os_Task_ZCL_Task;
-extern struct _os_tsTask os_Task_APP_ZPR_Outlet_Task;
+extern struct _os_tsTask os_Task_APP_ZPR_Light_Task;
 extern struct _os_tsTask os_Task_zps_taskZPS;
-extern struct _os_tsTask os_Task_APP_AgeOutChildren;
-extern struct _os_tsTask os_Task_App_TimeReadJitterTask;
 extern struct _os_tsTask os_Task_APP_vManagePowerOnCount;
+extern struct _os_tsTask os_Task_APP_AgeOutChildren;
+extern struct _os_tsTask os_Task_Tick_Task;
+extern struct _os_tsTask os_Task_APP_RadioRecal;
+extern struct _os_tsTask os_Task_OTA_MsTask;
+extern struct _os_tsTask os_Task_APP_PollTask;
 
 /* Message Handles */
 extern struct _os_tsMessage os_Message_APP_msgZpsEvents;
@@ -144,14 +144,16 @@ extern struct _os_tsMessage os_Message_APP_msgPOREvents;
 
 /* Timer Handles */
 extern struct _os_tsHWCounter os_HWCounter_APP_cntrTickTimer;
-extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_DriverOutlet_ButtonScanTimer;
+extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_ButtonsScanTimer;
 extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_TickTimer;
+extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_RadioRecalTimer;
 extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_JoinTimer;
+extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_PowerOnCountTimer;
 extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_AgeOutChildrenTmr;
 extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_BackOffTimer;
 extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_StartUPTimer;
-extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_App_TimeReadJitterTimer;
-extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_PowerOnCountTimer;
+extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_OTA_MsTimer;
+extern struct _os_tsSWTimer os_SWTimer_APP_cntrTickTimer_APP_PollTimer;
 
 /****************************************************************************/
 /***        Exported Functions                                            ***/

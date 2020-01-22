@@ -6,7 +6,7 @@
  *
  * COMPONENT:      pdum_gen.c
  *
- * DATE:           Wed Jan 22 10:36:51 2020
+ * DATE:           Wed Jan 22 09:40:58 2020
  *
  * AUTHOR:         Jennic PDU Manager Configuration Tool
  *
@@ -78,7 +78,7 @@ typedef struct pdum_tsAPdu_tag pdum_tsAPdu;
 
 
 /* NPDU Pool */
-PRIVATE pdum_tsNPdu s_asNPduPool[25];
+PRIVATE pdum_tsNPdu s_asNPduPool[15];
 
 /* APDU Pool */
 PRIVATE uint8 s_au8apduZDPInstance0Storage[100];
@@ -139,7 +139,7 @@ PUBLIC void PDUM_vInit(void)
     for (i =0; i < 2; i++) { 
         s_asAPduPool[i].u16FreeListHeadIdx = 0;
     }
-    pdum_vNPduInit(s_asNPduPool, 25, mutexMAC);
+    pdum_vNPduInit(s_asNPduPool, 15, mutexMAC);
     pdum_vAPduInit(s_asAPduPool, 2, NULL);
 }
 

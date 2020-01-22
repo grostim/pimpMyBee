@@ -6,7 +6,7 @@
  *
  * COMPONENT:      zps_gen.c
  *
- * DATE:           Wed Jan 22 10:36:52 2020
+ * DATE:           Wed Jan 22 09:40:59 2020
  *
  * AUTHOR:         Jennic Zigbee Protocol Stack Configuration Tool
  *
@@ -519,6 +519,8 @@ PUBLIC bool zps_bAplZdoBindUnbindServer(void *, void *, ZPS_tsAfEvent *);
 PUBLIC void zps_vAplZdoBindUnbindServerInit(void *, PDUM_thAPdu );
 PUBLIC bool zps_bAplZdoBindRequestServer(void *, void *, ZPS_tsAfEvent *);
 PUBLIC void zps_vAplZdoBindRequestServerInit(void *, uint8, uint8, zps_tsZdoServerConfAckContext* );
+PUBLIC bool zps_bAplZdoMgmtBindServer(void *, void *, ZPS_tsAfEvent *);
+PUBLIC void zps_vAplZdoMgmtBindServerInit(void *, PDUM_thAPdu );
 PUBLIC bool zps_bAplZdoPermitJoiningServer(void *, void *, ZPS_tsAfEvent *);
 PUBLIC void zps_vAplZdoPermitJoiningServerInit(void *, PDUM_thAPdu );
 PUBLIC bool zps_bAplZdoMgmtRtgServer(void *, void *, ZPS_tsAfEvent *);
@@ -528,13 +530,13 @@ PUBLIC void zps_vAplZdoMgmtRtgServerInit(void *, PDUM_thAPdu );
 /***        Local Variables                                               ***/
 /****************************************************************************/
 
-PRIVATE ZPS_tsAplApsmeBindingTableEntry s_bindingTableStorage[16];
-PRIVATE ZPS_tsAplApsmeBindingTable s_bindingTable = { 0, s_bindingTableStorage, 16 };
+PRIVATE ZPS_tsAplApsmeBindingTableEntry s_bindingTableStorage[4];
+PRIVATE ZPS_tsAplApsmeBindingTable s_bindingTable = { 0, s_bindingTableStorage, 4 };
 PRIVATE ZPS_tsAplApsmeBindingTableType s_bindingTables = { NULL, &s_bindingTable };
-PRIVATE ZPS_tsAplApsmeGroupTableEntry s_groupTableStorage[16];
-PRIVATE ZPS_tsAplApsmeAIBGroupTable s_groupTable = { s_groupTableStorage, 16 };
-PRIVATE ZPS_tsAPdmGroupTableEntry s_groupTablePdmStorage[16];
-PUBLIC ZPS_tsPdmGroupTable s_groupPdmTable = { s_groupTablePdmStorage, 16 };
+PRIVATE ZPS_tsAplApsmeGroupTableEntry s_groupTableStorage[8];
+PRIVATE ZPS_tsAplApsmeAIBGroupTable s_groupTable = { s_groupTableStorage, 8 };
+PRIVATE ZPS_tsAPdmGroupTableEntry s_groupTablePdmStorage[8];
+PUBLIC ZPS_tsPdmGroupTable s_groupPdmTable = { s_groupTablePdmStorage, 8 };
 PRIVATE ZPS_tsAplApsKeyDescriptorEntry s_keyPairTableStorage[3] = {
     { 0xFFFF, { }, 0 , 0 , 1 },
 };
@@ -575,11 +577,12 @@ PRIVATE uint8 s_sMgmtNWKUpdateServerContext[64] __attribute__ ((aligned (4)));
 PRIVATE uint8 s_sBindUnbindServerContext[64] __attribute__ ((aligned (4)));
 PRIVATE uint8 s_sBindRequestServerContext[92] __attribute__ ((aligned (4)));
 PRIVATE zps_tsZdoServerConfAckContext s_sBindRequestServerAcksDcfmContext[3];
+PRIVATE uint8 s_sMgmtBindServerContext[4] __attribute__ ((aligned (4)));
 PRIVATE uint8 s_sPermitJoiningServerContext[4] __attribute__ ((aligned (4)));
 PRIVATE uint8 s_sMgmtRtgServerContext[4] __attribute__ ((aligned (4)));
 
 /* ZDO Servers */
-PRIVATE const zps_tsAplZdoServer s_asAplZdoServers[19] = {
+PRIVATE const zps_tsAplZdoServer s_asAplZdoServers[20] = {
     { zps_bAplZdoZdoClient, s_sZdoClientContext },
     { zps_bAplZdoDeviceAnnceServer, s_sDeviceAnnceServerContext },
     { zps_bAplZdoActiveEpServer, s_sActiveEpServerContext },
@@ -595,6 +598,7 @@ PRIVATE const zps_tsAplZdoServer s_asAplZdoServers[19] = {
     { zps_bAplZdoMgmtNWKUpdateServer, s_sMgmtNWKUpdateServerContext },
     { zps_bAplZdoBindUnbindServer, s_sBindUnbindServerContext },
     { zps_bAplZdoBindRequestServer, s_sBindRequestServerContext },
+    { zps_bAplZdoMgmtBindServer, s_sMgmtBindServerContext },
     { zps_bAplZdoPermitJoiningServer, s_sPermitJoiningServerContext },
     { zps_bAplZdoMgmtRtgServer, s_sMgmtRtgServerContext },
     { zps_bAplZdoDefaultServer, s_sDefaultServerContext },
@@ -609,12 +613,12 @@ PRIVATE uint8 s_au8Endpoint0InputClusterDiscFlags[11] = { 0x00, 0x00, 0x00, 0x00
 PRIVATE const uint16 s_au16Endpoint0OutputClusterList[83] = { 0x0000, 0x0001, 0x0002, 0x0003, 0x0004, 0x0005, 0x0006, 0x0010, 0x0011, 0x0012, 0x0013, 0x0014, 0x0015, 0x0016, 0x0017, 0x0018, 0x0019, 0x001a, 0x001b, 0x001c, 0x001d, 0x001e, 0x0020, 0x0021, 0x0022, 0x0023, 0x0024, 0x0025, 0x0026, 0x0027, 0x0028, 0x0029, 0x002a, 0x0030, 0x0031, 0x0032, 0x0033, 0x0034, 0x0035, 0x0036, 0x0037, 0x0038, 0x8000, 0x8001, 0x8002, 0x8003, 0x8004, 0x8005, 0x8006, 0x8010, 0x8011, 0x8012, 0x8014, 0x8015, 0x8016, 0x8017, 0x8018, 0x8019, 0x801a, 0x801b, 0x801c, 0x801d, 0x801e, 0x8020, 0x8021, 0x8022, 0x8023, 0x8024, 0x8025, 0x8026, 0x8027, 0x8028, 0x8029, 0x802a, 0x8030, 0x8031, 0x8032, 0x8033, 0x8034, 0x8035, 0x8036, 0x8037, 0x8038, };
 PRIVATE uint8 s_au8Endpoint0OutputClusterDiscFlags[11] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
-PRIVATE const uint16 s_au16Endpoint1InputClusterList[7] = { 0x0006, 0x0005, 0x0004, 0xffff, 0x0000, 0x0003, 0x0019, };
-PRIVATE const PDUM_thAPdu s_ahEndpoint1InputClusterAPdus[7] = { apduZCL, apduZCL, apduZCL, apduZCL, apduZCL, apduZCL, apduZCL, };
-PRIVATE uint8 s_au8Endpoint1InputClusterDiscFlags[1] = { 0x37 };
+PRIVATE const uint16 s_au16Endpoint1InputClusterList[8] = { 0x0000, 0x0004, 0x0003, 0x0006, 0x0008, 0x0005, 0xffff, 0x0019, };
+PRIVATE const PDUM_thAPdu s_ahEndpoint1InputClusterAPdus[8] = { apduZCL, apduZCL, apduZCL, apduZCL, apduZCL, apduZCL, apduZCL, apduZCL, };
+PRIVATE uint8 s_au8Endpoint1InputClusterDiscFlags[1] = { 0x3f,  };
 
-PRIVATE const uint16 s_au16Endpoint1OutputClusterList[6] = { 0x0006, 0x0005, 0x0004, 0x0000, 0x0003, 0x0019, };
-PRIVATE uint8 s_au8Endpoint1OutputClusterDiscFlags[1] = { 0x20 };
+PRIVATE const uint16 s_au16Endpoint1OutputClusterList[7] = { 0x0000, 0x0004, 0x0003, 0x0006, 0x0008, 0x0005, 0x0019, };
+PRIVATE uint8 s_au8Endpoint1OutputClusterDiscFlags[1] = { 0x40 };
 
 PRIVATE zps_tsAplAfSimpleDescCont s_asSimpleDescConts[2] = {
     {
@@ -638,11 +642,11 @@ PRIVATE zps_tsAplAfSimpleDescCont s_asSimpleDescConts[2] = {
         APP_msgZpsEvents_ZCL,
         {
             0x0104,
-            9,
+            257,
+            2,
             1,
-            1,
+            8,
             7,
-            6,
             s_au16Endpoint1InputClusterList,
             s_au16Endpoint1OutputClusterList,
             s_au8Endpoint1InputClusterDiscFlags,
@@ -696,16 +700,16 @@ PRIVATE zps_tsApsmeCmdContainer s_sApsmeCmdContainer_1 = { &s_sApsmeCmdContainer
 
 /* Network Layer Context */
 PRIVATE uint8                   s_sNwkContext[1784] __attribute__ ((aligned (4)));
-PRIVATE ZPS_tsNwkDiscNtEntry    s_asNwkNtDisc[16];
-PRIVATE ZPS_tsNwkActvNtEntry    s_asNwkNtActv[24];
-PRIVATE ZPS_tsNwkRtDiscEntry    s_asNwkRtDisc[16];
-PRIVATE ZPS_tsNwkRtEntry        s_asNwkRt[24];
-PRIVATE ZPS_tsNwkBtr            s_asNwkBtt[35];
-PRIVATE ZPS_tsNwkRctEntry       s_asNwkRct[4];
+PRIVATE ZPS_tsNwkDiscNtEntry    s_asNwkNtDisc[8];
+PRIVATE ZPS_tsNwkActvNtEntry    s_asNwkNtActv[26];
+PRIVATE ZPS_tsNwkRtDiscEntry    s_asNwkRtDisc[2];
+PRIVATE ZPS_tsNwkRtEntry        s_asNwkRt[70];
+PRIVATE ZPS_tsNwkBtr            s_asNwkBtt[20];
+PRIVATE ZPS_tsNwkRctEntry       s_asNwkRct[1];
 PRIVATE ZPS_tsNwkSecMaterialSet s_asNwkSecMatSet[2];
-PRIVATE uint32                  s_asNwkInFCSet[24];
-PRIVATE uint16                  s_au16NwkAddrMapNwk[28];
-PRIVATE uint16                  s_au16NwkAddrMapLookup[28];
+PRIVATE uint32                  s_asNwkInFCSet[26];
+PRIVATE uint16                  s_au16NwkAddrMapNwk[14];
+PRIVATE uint16                  s_au16NwkAddrMapLookup[14];
 PRIVATE uint64                  s_au64NwkAddrMapExt[40];
 
 PRIVATE const zps_tsNwkNibInitialValues s_sNibInitialValues =
@@ -736,19 +740,19 @@ PRIVATE const zps_tsNwkNibInitialValues s_sNibInitialValues =
 };
 
 
-PRIVATE const uint16 u16ChildTableSize = 6;
+PRIVATE const uint16 u16ChildTableSize = 5;
 
 PRIVATE const ZPS_tsNwkNibTblSize     s_sNwkTblSize = {
-    24,
-    24,
-    4,
-    24,
-    16,
-    16,
-    35,
+    26,
+    70,
+    1,
+    10,
+    8,
+    2,
+    20,
     2,
     sizeof(s_sNibInitialValues),
-    6,
+    5,
     36
 };
 
@@ -910,6 +914,7 @@ PRIVATE void vZdoServersInit(void)
     zps_vAplZdoMgmtNWKUpdateServerInit(&s_sMgmtNWKUpdateServerContext, apduZDP, &s_sApl);
     zps_vAplZdoBindUnbindServerInit(&s_sBindUnbindServerContext, apduZDP);
     zps_vAplZdoBindRequestServerInit(&s_sBindRequestServerContext, 1, 3, s_sBindRequestServerAcksDcfmContext);
+    zps_vAplZdoMgmtBindServerInit(&s_sMgmtBindServerContext, apduZDP);
     zps_vAplZdoPermitJoiningServerInit(&s_sPermitJoiningServerContext, apduZDP);
     zps_vAplZdoMgmtRtgServerInit(&s_sMgmtRtgServerContext, apduZDP);
 }

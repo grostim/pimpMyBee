@@ -4,13 +4,13 @@
 #
 # MODULE:         OS
 #
-# COMPONENT:      os_irq_unimplementedmodule.s
+# COMPONENT:      os_irq_buserror.s
 #
-# DATE:           Wed Jan 22 10:36:48 2020
+# DATE:           Wed Jan 22 09:40:56 2020
 #
 # AUTHOR:         Jennic RTOS Configuration Tool
 #
-# DESCRIPTION:    Wrapper for uncontrolled 'UnimplementedModule' exception. Calls a C Function
+# DESCRIPTION:    Wrapper for uncontrolled 'BusError' exception. Calls a C Function
 #                 to handle the exception.
 #
 #==============================================================================
@@ -33,16 +33,16 @@
 #
 #==============================================================================
 
-    .globl IRQ_UnimplementedModule
+    .globl IRQ_BusError
     .extern os_CFunc_W
-IRQ_UnimplementedModule:
-    .extern os_vAPP_isrUnimplementedModuleException
+IRQ_BusError:
+    .extern os_vAPP_isrBusErrorException
     b.addi r1,r1,-(0xc)
     b.sw   0(r1),r9
     b.sw   4(r1),r5
     bw.mfspr r9,r0,0x20
     bw.sw  8(r1),r9
-    b.ori  r5,r0,os_vAPP_isrUnimplementedModuleException
+    b.ori  r5,r0,os_vAPP_isrBusErrorException
     b.jal  os_CFunc_W
     b.lwz  r9,0(r1)
     b.lwz  r5,4(r1)

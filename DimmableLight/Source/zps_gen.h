@@ -6,7 +6,7 @@
  *
  * COMPONENT:      zps_gen.h
  *
- * DATE:           Wed Jan 22 10:36:52 2020
+ * DATE:           Wed Jan 22 09:40:59 2020
  *
  * AUTHOR:         Jennic Zigbee Protocol Stack Configuration Tool
  *
@@ -45,7 +45,7 @@
 /****************************************************************************/
 
 #define ZPS_NWK_OPT_ALL
-#define ZPS_NODE_MAINSPOWEROUTLET
+#define ZPS_NODE_DIMMABLELIGHT
 
 /* Profile 'ZDP' */
 #define ZDP_PROFILE_ID    (0x0000)
