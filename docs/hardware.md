@@ -51,7 +51,15 @@ Some very fine wire might be required for the devices with 1.27mm pitch (most sm
 
 ### Clips
 
-Using [this clip](https://amzn.to/2GgbbQS), you can arrange an easy connection the pads as long as they are spaced 1.27mm away.
+Using [this clip](https://amzn.to/2GgbbQS), you can arrange a connection to the pads as long as they are spaced 1.27mm away.
+
+![](https://reho.st/medium/https://lh3.googleusercontent.com/5kOf88YBkg9_9D2db0H5VgiOVITCCicsO-9P5u8vrkxVuHCh15nny23bofsxt49N2ZsI7uwC2WK-sJgaUK4vdsE0jKglCnR_vwYRPVnIRIshLZ08sbBg2X21TvAriRVimXE5GwaAYitMLnpJgPzS7fvCC5F_wxjXteNxW5L3n8g5OIib6qdT6wjp3ZbLEXgmJQ9u3Y6gE-b0YypJJ2zqpEIh_bHbOghLB7q3rrkJIAOsY2DBJkGtHV5YPf8vRXNc2knHtEGygrgXOwORVzsJnfOmB3RVrGmrGGbxBm-NrQOP7boGFKOBUpaPv_y4XZEgKJeuEkcWe9gzohcx2Uz7ahcUMTPkvEFykgR-8B-AQd7r6E1xy1or9ZMEOC4nQbU0_mMcX3s15LgoN6MsxYeMammYtkkfYLQ_6JUgZ4gbCual3I0YxYbkRO5WZGS568hj7FY8mmnrHACxqdutysJg5nbH-GYaXtrq4MWAFGHjog0WwncHcysjCXtWp_O-P5_hHfIs4Gg-0f-gnY4jH57i-1_4t2LA9mn7hV_mAf5NKi8oY3G4ABN4zkPXM5p57hfDifoahMRpe9BAEKFV0F38acSX4b9AK5pZsf9ilqwpLer00ksRSZJU1S62ipufmDDa6wU2LlW_z2TLWQdAzhhC2oLMK1fiU8bTrOUv0ke5vKjLvAJfdEZ4424=w2892-h1626-no)
+> Clip on a WXKG02LM
+
+This solution is not perfect though:
+- Aligning the clip and the pads is tricky. The clip may move easily during flashing.
+- The clip might not be able to reach the pads for some devices where the pads are too far from the edge.
 
 ### pogo pins
-This is an option that i have not investigates yet, but i am pretty sure a custom connector based on pogo pins could be made for each type of sensor.
+This is an option that i have not investigated yet, but i am pretty sure a custom connector based on pogo pins could be made for each type of sensor.
+That would be probably the best solution.
