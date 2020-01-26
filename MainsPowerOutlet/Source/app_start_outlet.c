@@ -98,7 +98,7 @@ extern void *_stack_low_water_mark;
  ****************************************************************************/
 PUBLIC void vAppMain(void)
 {
-    #if JENNIC_CHIP_FAMILY == JN516x
+	#if JENNIC_CHIP_FAMILY == JN516x
         /* Wait until FALSE i.e. on XTAL  - otherwise uart data will be at wrong speed */
          while (bAHI_GetClkSource() == TRUE);
          /* Now we are running on the XTAL, optimise the flash memory wait states */
