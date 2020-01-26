@@ -63,3 +63,26 @@ This solution is not perfect though:
 ### pogo pins
 This is an option that i have not investigated yet, but i am pretty sure a custom connector based on pogo pins could be made for each type of sensor.
 That would be probably the best solution.
+
+## USB to Serial interface
+
+Aa USB to serial interface will be required.
+[FTDI232](https://amzn.to/2NZU5uu) is the most famous type of chip for such interface. However equivalent chip ( CP 2102 or [CH340](https://amzn.to/2NZU5uu) ) might also be used. Just make sure that the chip you use is able to provide 3.3V logic level. (5V will fry your device).
+
+You will need to connect 
+JN5169 | JP1 | Function | USB interface
+------------- | ------------- | ------------- | -------------
+28 | 1 | TXD0 | RXD
+29 | 2 | RXD0 | TXD
+22 | 3 | SPIMISO | *
+9/30 | 4 | VDD | 3.3V
+3 | 5 | RESETN | **
+21/39 | 6 | VSS | GND
+
+(*) Connect this pin to ground through a pull down resistor (any resistor >1Kohm will work). When tied to ground during boot, this will force the MCU to start in programming mode. If the pin is floating or pulled-up to 3.3V, the MCU will boot normally and execute the firmware. If you plan to develop you own custom firmware, using a switch is a good idea, as you will be able to keep the serial connection while running the program to monitor the serial debugging output.
+(**) You can keep this pin floating. Connecting it shortly to ground will reset (reboot) the MCU.
+
+![](https://reho.st/medium/https://lh3.googleusercontent.com/YyG4kF3VSj8lxU_cULgqN8wfSolZ4X9Qup_iL2hQX816m9nPyj1LoQnT6kbmtCcWOggxjfHz1lgNCrXVWh8tDkQu-iXkB7hYarsmAd2XaOGufIrEWWe6ztxZu3s50VcH4_gkVs9eMsZshW3I-FC5I6byS6zjBZoiMm-DeNhq5kF3Y4Z39RyxaW0PiPazIOEFrJKaYO_qNeY14wpFOzvi8kEM9NHj6LXrdPSWSpu7b0HhuD93xOYclwOrlwp_ZkT1BVrVjSO2FE2bmrl__BL-aGIjXwGS6XeQk6WaDgw7Zib-VYZ2IkxwdaXyeytHIVSEkd3bs8joyBdn9GyJ0Pxg6hBxCR8SRWKmiXZCXm0je-pgiwdX1jjCwXPUONKBCzKhB0XidGsaEh_lmG1k_s62HpKsOh_bqi9-Fejx39a5e5jHTzcoKqUO-0k-dB6UUsctloQ_6Luu8ddrceIgfp1FP8pDowHrq2SNDlEMIt4FKw8tRSd9u3rZ9UAb0NdZX9EySpQDZ4kXQB7uThExDV4k7nfUiMNn4jyNQIf6vLGjJQkLpUAYgab8tgGhwGEdiNUgYS52SjfIWiZbNuwpDUzi-4BZK51e5C7IZnzGClaHYdIsQJAslH-KQuB0Mv4QcwyK0WaeNN5oM0LExA4XB7WHIJtAk6oWFHtFwUzBomyqvJLyejkY5IFKCEI=w914-h1624-no)
+>My quick and dirty connection
+
+Now that everything is ready, [let's install the software](software.md)
