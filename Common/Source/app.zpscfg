@@ -2897,4 +2897,219 @@
       <BindRequestServer OutputAPdu="DimmableLightOpenHome->apduZDP" SimultaneousRequests="0x0003" TimeInterval="0x0001"/>
     </ZDOServers>
   </ChildNodes>
+  <ChildNodes xsi:type="zpscfg:Router" Name="GatewayV1asRouter" DiscoveryNeighbourTableSize="16" ActiveNeighbourTableSize="24" RouteDiscoveryTableSize="1" RoutingTableSize="60" BroadcastTransactionTableSize="35" RouteRecordTableSize="4" AddressMapTableSize="24" SecurityMaterialSets="2" MaxNumSimultaneousApsdeReq="5" MaxNumSimultaneousApsdeAckReq="3" MACMutexName="mutexMAC" ZPSMutexName="mutexZPS" FragmentationMaxNumSimulRx="0" FragmentationMaxNumSimulTx="0" DefaultEventMessageName="APP_msgZpsEvents" MACDcfmIndMessage="zps_msgDcfmInd" MACTimeEventMessage="zps_msgTimeEvents" apsNonMemberRadius="2" apsDesignatedCoordinator="false" apsUseInsecureJoin="true" apsMaxWindowSize="8" apsInterframeDelay="10" APSDuplicateTableSize="5" apsSecurityTimeoutPeriod="3000" apsUseExtPANId="0x0000000000000000" InitialNetworkKey="Coordinator->PreconfiguredTCLinkKey" SecurityEnabled="true" MACMlmeDcfmIndMessage="zps_msgMlmeDcfmInd" MACMcpsDcfmIndMessage="zps_msgMcpsDcfmInd" APSPersistenceTime="100" NumAPSMESimulCommands="4" StackProfile="2" InterPAN="false" GreenPowerSupport="false" NwkFcSaveCountBitShift="10" ApsFcSaveCountBitShift="10" MacTableSize="36" DefaultCallbackName="APP_vGenCallback" PermitJoiningTime="0" ChildTableSize="6" ScanDuration="3" NetworkSelection="User Selected">
+    <Endpoints Id="0" Enabled="true" ApplicationDeviceId="0" ApplicationDeviceVersion="0" Profile="ZDP" Name="ZDO">
+      <InputClusters Cluster="NWK_addr_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="IEEE_addr_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Node_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Power_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Simple_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Active_EP_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Match_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Complex_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="User_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Discovery_Cache_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Device_annce" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="User_Desc_set" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="System_Server_Discovery_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Discovery_store_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Node_Desc_store_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Power_Desc_store_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Active_EP_store_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Simple_Desc_store_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Remove_node_cache_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Find_node_chache_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Extended_Simple_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Extended_Active_EP_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="End_Device_Bind_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Bind_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Unbind_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Bind_Register_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Replace_Device_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Store_Bkup_Bind_Entry_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Remove_Bkup_Bind_Entry_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Backup_Bind_Table_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Recover_Bind_Table_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Backup_Source_Bind_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Recover_Source_Bind_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_NWK_Disc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Lqi_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Rtg_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Bind_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Leave_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Direct_Join_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Permit_Joining_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Cache_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_NWK_Update_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="NWK_addr_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="IEEE_addr_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Node_Desc_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Power_Desc_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Simple_Desc_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Active_EP_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Match_Desc_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Complex_Desc_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="User_Desc_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Discovery_Cache_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="User_Desc_conf" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="System_Server_Discovery_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Discovery_store_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Node_Desc_store_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Power_Desc_store_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Active_EP_store_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Simple_Desc_store_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Remove_node_cache_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Find_node_chache_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Extended_Simple_Desc_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Extended_Active_EP_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="End_Device_Bind_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Bind_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Unbind_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Bind_Register_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Replace_Device_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Store_Bkup_Bind_Entry_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Remove_Bkup_Bind_Entry_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Backup_Bind_Table_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Recover_Bind_Table_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Backup_Source_Bind_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Recover_Source_Bind_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_NWK_Disc_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Lqi_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Rtg_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Bind_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Leave_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Direct_Join_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Permit_Joining_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Cache_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_NWK_Update_rsp" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="NWK_addr_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="IEEE_addr_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Node_Desc_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Power_Desc_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Simple_Desc_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Active_EP_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Match_Desc_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Complex_Desc_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="User_Desc_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Discovery_Cache_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Device_annce" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="User_Desc_set" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="System_Server_Discovery_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Discovery_store_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Node_Desc_store_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Power_Desc_store_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Active_EP_store_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Simple_Desc_store_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Remove_node_cache_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Find_node_chache_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Extended_Simple_Desc_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Extended_Active_EP_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="End_Device_Bind_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Bind_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Unbind_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Bind_Register_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Replace_Device_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Store_Bkup_Bind_Entry_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Remove_Bkup_Bind_Entry_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Backup_Bind_Table_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Recover_Bind_Table_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Backup_Source_Bind_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Recover_Source_Bind_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_NWK_Disc_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Lqi_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Rtg_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Bind_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Leave_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Direct_Join_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Permit_Joining_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Cache_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_NWK_Update_req" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="NWK_addr_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="IEEE_addr_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Node_Desc_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Power_Desc_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Simple_Desc_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Active_EP_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Match_Desc_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Complex_Desc_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="User_Desc_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Discovery_Cache_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="User_Desc_conf" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="System_Server_Discovery_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Discovery_store_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Node_Desc_store_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Power_Desc_store_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Active_EP_store_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Simple_Desc_store_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Remove_node_cache_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Find_node_chache_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Extended_Simple_Desc_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Extended_Active_EP_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="End_Device_Bind_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Bind_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Unbind_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Bind_Register_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Replace_Device_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Store_Bkup_Bind_Entry_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Remove_Bkup_Bind_Entry_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Backup_Bind_Table_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Recover_Bind_Table_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Backup_Source_Bind_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Recover_Source_Bind_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_NWK_Disc_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Lqi_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Rtg_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Bind_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Leave_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Direct_Join_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Permit_Joining_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Cache_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_NWK_Update_rsp" TxAPDUs="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+    </Endpoints>
+    <Endpoints Id="1" Enabled="true" ApplicationDeviceId="9" ApplicationDeviceVersion="1" Profile="HOME_AUTOMATION" Message="APP_msgZpsEvents_ZCL" Name="OUTLET">
+      <InputClusters Cluster="OnOff" RxAPDU="GatewayV1asRouter->apduZCL" Discoverable="true"/>
+      <InputClusters Cluster="Scenes" RxAPDU="GatewayV1asRouter->apduZCL" Discoverable="true"/>
+      <InputClusters Cluster="Groups" RxAPDU="GatewayV1asRouter->apduZCL" Discoverable="true"/>
+      <InputClusters Cluster="Default" RxAPDU="GatewayV1asRouter->apduZCL" Discoverable="false"/>
+      <InputClusters Cluster="Basic" RxAPDU="GatewayV1asRouter->apduZCL" Discoverable="true"/>
+      <InputClusters Cluster="Identify" RxAPDU="GatewayV1asRouter->apduZCL" Discoverable="true"/>
+      <InputClusters Cluster="OTA" RxAPDU="GatewayV1asRouter->apduZCL" Discoverable="false"/>
+      <OutputClusters Cluster="OnOff" TxAPDUs="GatewayV1asRouter->apduZCL" Discoverable="false"/>
+      <OutputClusters Cluster="Scenes" TxAPDUs="GatewayV1asRouter->apduZCL" Discoverable="false"/>
+      <OutputClusters Cluster="Groups" TxAPDUs="GatewayV1asRouter->apduZCL" Discoverable="false"/>
+      <OutputClusters Cluster="Basic" TxAPDUs="GatewayV1asRouter->apduZCL" Discoverable="false"/>
+      <OutputClusters Cluster="Identify" TxAPDUs="GatewayV1asRouter->apduZCL" Discoverable="false"/>
+      <OutputClusters Cluster="OTA" TxAPDUs="GatewayV1asRouter->apduZCL" Discoverable="true"/>
+    </Endpoints>
+    <PDUConfiguration NumNPDUs="25" PDUMMutexName="mutexPDUM">
+      <APDUs Id="GatewayV1asRouter->apduZDP" Name="apduZDP" Size="100" Instances="3"/>
+      <APDUs Id="GatewayV1asRouter->apduZCL" Name="apduZCL" Size="100" Instances="10"/>
+    </PDUConfiguration>
+    <ChannelMask Channel11="true" Channel12="true" Channel13="true" Channel14="true" Channel15="true" Channel16="true" Channel17="true" Channel18="true" Channel19="true" Channel20="true" Channel21="true" Channel22="true" Channel23="true" Channel24="true" Channel25="true" Channel26="true"/>
+    <NodeDescriptor ManufacturerCode="4151" LogicalType="ZR" ComplexDescriptorAvailable="false" UserDescriptorAvailable="false" APSFlags="0" FrequencyBand="2.4GHz" AlternatePANCoordinator="false" DeviceType="true" PowerSource="true" RxOnWhenIdle="true" Security="false" AllocateAddress="true" MaximumBufferSize="127" MaximumIncomingTransferSize="100" MaximumOutgoingTransferSize="100" ExtendedActiveEndpointListAvailable="false" ExtendedSimpleDescriptorListAvailable="false" PrimaryTrustCenter="false" BackupTrustCenter="false" PrimaryBindingTableCache="false" BackupBindingTableCache="false" PrimaryDiscoveryCache="false" BackupDiscoveryCache="false" NetworkManager="false"/>
+    <NodePowerDescriptor ConstantPower="true" RechargeableBattery="false" DisposableBattery="false" DefaultPowerSource="Constant Power" DefaultPowerMode="Synchronised with RxOnWhenIdle"/>
+    <BindingTable Size="16"/>
+    <GroupTable Size="16"/>
+    <KeyDescriptorTable Size="1"/>
+    <ZDOServers>
+      <DefaultServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <ZdoClient OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <DeviceAnnceServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <ActiveEpServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <NwkAddrServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <IeeeAddrServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <SystemServerDiscoveryServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <NodeDescServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <PowerDescServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <MatchDescServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <SimpleDescServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <MgmtLqiServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <MgmtLeaveServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <MgmtNWKUpdateServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <BindUnbindServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <BindRequestServer OutputAPdu="GatewayV1asRouter->apduZDP" SimultaneousRequests="0x0003" TimeInterval="0x0001"/>
+      <PermitJoiningServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+      <MgmtRtgServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+    </ZDOServers>
+  </ChildNodes>
 </zpscfg:ZigbeeWirelessNetwork>
