@@ -15,7 +15,7 @@ At this stage, there is no stepping back: if you decide to flash you device with
 ### Customs firmware
 * [License](LICENSE.md)
 * [Use your xiaomi devices as a zigbee sniffer (By Jerome-PS)](https://github.com/Jerome-PS/JN516xSniffer)
-* [Use your Xiomi gateway as a zigbee router (repeater) - NOT WORKING YET]
+* [Use your Xiomi gateway as a zigbee router (repeater)](firmware/GatewayV1.md)
 
 ### Development
 * [How to install the development software suite - WORK IN PROGRESS]
