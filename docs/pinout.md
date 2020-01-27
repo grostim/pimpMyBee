@@ -9,3 +9,11 @@ I will collect here various informations gathered during my research regarding t
 | Switch S4 | 2       | DIO17    | Right |
 | LED D1    | 33      | DIO10    |   |
 | LED D2    | 34      | DIO11    |   |
+
+## WXKG01LM (Xiaomi round button)
+
+| Function  | MCU Pin | Function | Remark |
+| --------- | ------- | -------- | -------- |
+| Switch S1 |       | DIO0   | Pairing button |
+| Switch S2 |       | DIO16    | Main button |
+| LED    | 34      | DIO11    |   |
