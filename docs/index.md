@@ -20,3 +20,9 @@ At this stage, there is no stepping back: if you decide to flash you device with
 ### Development
 * [How to install the development software suite - WORK IN PROGRESS]
 * [pinout of various xiaomi modules](pinout.md)
+
+### ToDo List and future developments
+
+[ ] Versionize / tagging of the workable binaries.
+[ ] clean up the repeater firmware. Remove unused switch functions. Make it discoverable by zigbee2mqtt.
+[ ] Make a custom firmware for the button switches. (Make them use the standard on/off clusters and make them bindable).
