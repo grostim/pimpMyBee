@@ -27,4 +27,4 @@ There is some debugging message that can be monitored on the serial output while
 
 # Download
 
-[]()
+[Current Version](https://github.com/grostim/pimpMyBee/raw/master/MainsPowerOutlet/Build/MainsPowerOutlet_JN5169_DR1199.bin)
