@@ -1,7 +1,5 @@
 # Welcome to the pimpMyBee documentation!
 
-An attempt to develop custom firmware for xiaomi Zigbee devices.
-
 ### Foreword
 
 Be warned: This is a work in progress.
@@ -18,11 +16,11 @@ At this stage, there is no stepping back: if you decide to flash you device with
 * [Use your Xiomi gateway as a zigbee router (repeater)](firmware/GatewayV1.md)
 
 ### Development
-* [How to install the development software suite - WORK IN PROGRESS]
+* [How to install the development software suite - WORK IN PROGRESS](devsuite.md)
 * [pinout of various xiaomi modules](pinout.md)
 
 ### ToDo List and future developments
 
-- [ ] Versionize / tagging of the workable binaries.
+- [x] Versionize / tagging of the workable binaries.
 - [ ] clean up the repeater firmware. Remove unused switch functions. Make it discoverable by zigbee2mqtt.
 - [ ] Make a custom firmware for the button switches. (Make them use the standard on/off clusters and make them bindable).
