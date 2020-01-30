@@ -39,7 +39,7 @@
 #include <jendefs.h>
 #include "zps_gen.h"
 #include "GenericBoard.h"
-#include "App_DimmerSwitch.h"
+#include "App_WXKG02LM.h"
 #include <string.h>
 
 /****************************************************************************/

@@ -2901,7 +2901,7 @@
     <Endpoints Id="0" Enabled="true" ApplicationDeviceId="0" ApplicationDeviceVersion="0" Profile="ZDP" Name="ZDO">
       <InputClusters Cluster="NWK_addr_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
       <InputClusters Cluster="IEEE_addr_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
-      <InputClusters Cluster="Node_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Node_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="true"/>
       <InputClusters Cluster="Power_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
       <InputClusters Cluster="Simple_Desc_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
       <InputClusters Cluster="Active_EP_req" RxAPDU="GatewayV1asRouter->apduZDP" Discoverable="false"/>
@@ -3110,6 +3110,221 @@
       <BindRequestServer OutputAPdu="GatewayV1asRouter->apduZDP" SimultaneousRequests="0x0003" TimeInterval="0x0001"/>
       <PermitJoiningServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
       <MgmtRtgServer OutputAPdu="GatewayV1asRouter->apduZDP"/>
+    </ZDOServers>
+  </ChildNodes>
+  <ChildNodes xsi:type="zpscfg:EndDevice" Name="WXKG02LM" DiscoveryNeighbourTableSize="8" ActiveNeighbourTableSize="1" RouteDiscoveryTableSize="2" RoutingTableSize="1" BroadcastTransactionTableSize="9" RouteRecordTableSize="1" AddressMapTableSize="10" SecurityMaterialSets="2" MaxNumSimultaneousApsdeReq="4" MaxNumSimultaneousApsdeAckReq="4" MACMutexName="mutexMAC" ZPSMutexName="mutexZPS" FragmentationMaxNumSimulRx="0" FragmentationMaxNumSimulTx="0" DefaultEventMessageName="APP_msgZpsEvents" MACDcfmIndMessage="zps_msgDcfmInd" MACTimeEventMessage="zps_msgTimeEvents" apsNonMemberRadius="2" apsDesignatedCoordinator="false" apsUseInsecureJoin="true" apsMaxWindowSize="8" apsInterframeDelay="10" APSDuplicateTableSize="3" apsSecurityTimeoutPeriod="3000" apsUseExtPANId="0x0000000000000000" InitialNetworkKey="Coordinator->PreconfiguredTCLinkKey" SecurityEnabled="true" MACMlmeDcfmIndMessage="zps_msgMlmeDcfmInd" MACMcpsDcfmIndMessage="zps_msgMcpsDcfmInd" APSPersistenceTime="100" NumAPSMESimulCommands="4" StackProfile="2" InterPAN="false" GreenPowerSupport="false" NwkFcSaveCountBitShift="10" ApsFcSaveCountBitShift="10" MacTableSize="36" DefaultCallbackName="APP_vGenCallback" ScanDuration="3" NetworkSelection="User Selected" NumPollFailuresBeforeRejoin="3" Sleeping="true" FragmentedTxPollPeriod="25" FragmentedRxPollPeriod="25" APSPollPeriod="200">
+    <Endpoints Id="0" Enabled="true" ApplicationDeviceId="0" ApplicationDeviceVersion="0" Profile="ZDP" Name="ZDO">
+      <InputClusters Cluster="NWK_addr_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="IEEE_addr_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Node_Desc_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Power_Desc_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Simple_Desc_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Active_EP_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Match_Desc_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Complex_Desc_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="User_Desc_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Discovery_Cache_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Device_annce" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="User_Desc_set" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="System_Server_Discovery_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Discovery_store_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Node_Desc_store_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Power_Desc_store_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Active_EP_store_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Simple_Desc_store_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Remove_node_cache_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Find_node_chache_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Extended_Simple_Desc_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Extended_Active_EP_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="End_Device_Bind_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Bind_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Unbind_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Bind_Register_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Replace_Device_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Store_Bkup_Bind_Entry_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Remove_Bkup_Bind_Entry_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Backup_Bind_Table_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Recover_Bind_Table_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Backup_Source_Bind_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Recover_Source_Bind_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_NWK_Disc_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Lqi_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Rtg_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Bind_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Leave_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Direct_Join_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Permit_Joining_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Cache_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_NWK_Update_req" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="NWK_addr_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="IEEE_addr_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Node_Desc_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Power_Desc_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Simple_Desc_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Active_EP_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Match_Desc_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Complex_Desc_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="User_Desc_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Discovery_Cache_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="User_Desc_conf" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="System_Server_Discovery_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Discovery_store_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Node_Desc_store_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Power_Desc_store_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Active_EP_store_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Simple_Desc_store_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Remove_node_cache_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Find_node_chache_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Extended_Simple_Desc_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Extended_Active_EP_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="End_Device_Bind_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Bind_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Unbind_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Bind_Register_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Replace_Device_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Store_Bkup_Bind_Entry_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Remove_Bkup_Bind_Entry_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Backup_Bind_Table_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Recover_Bind_Table_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Backup_Source_Bind_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Recover_Source_Bind_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_NWK_Disc_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Lqi_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Rtg_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Bind_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Leave_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Direct_Join_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Permit_Joining_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_Cache_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <InputClusters Cluster="Mgmt_NWK_Update_rsp" RxAPDU="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="NWK_addr_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="IEEE_addr_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Node_Desc_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Power_Desc_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Simple_Desc_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Active_EP_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Match_Desc_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Complex_Desc_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="User_Desc_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Discovery_Cache_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Device_annce" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="User_Desc_set" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="System_Server_Discovery_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Discovery_store_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Node_Desc_store_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Power_Desc_store_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Active_EP_store_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Simple_Desc_store_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Remove_node_cache_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Find_node_chache_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Extended_Simple_Desc_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Extended_Active_EP_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="End_Device_Bind_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Bind_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Unbind_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Bind_Register_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Replace_Device_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Store_Bkup_Bind_Entry_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Remove_Bkup_Bind_Entry_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Backup_Bind_Table_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Recover_Bind_Table_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Backup_Source_Bind_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Recover_Source_Bind_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_NWK_Disc_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Lqi_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Rtg_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Bind_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Leave_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Direct_Join_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Permit_Joining_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Cache_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_NWK_Update_req" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="NWK_addr_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="IEEE_addr_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Node_Desc_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Power_Desc_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Simple_Desc_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Active_EP_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Match_Desc_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Complex_Desc_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="User_Desc_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Discovery_Cache_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="User_Desc_conf" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="System_Server_Discovery_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Discovery_store_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Node_Desc_store_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Power_Desc_store_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Active_EP_store_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Simple_Desc_store_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Remove_node_cache_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Find_node_chache_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Extended_Simple_Desc_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Extended_Active_EP_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="End_Device_Bind_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Bind_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Unbind_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Bind_Register_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Replace_Device_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Store_Bkup_Bind_Entry_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Remove_Bkup_Bind_Entry_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Backup_Bind_Table_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Recover_Bind_Table_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Backup_Source_Bind_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Recover_Source_Bind_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_NWK_Disc_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Lqi_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Rtg_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Bind_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Leave_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Direct_Join_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Permit_Joining_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_Cache_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+      <OutputClusters Cluster="Mgmt_NWK_Update_rsp" TxAPDUs="WXKG02LM->apduZDP" Discoverable="false"/>
+    </Endpoints>
+    <Endpoints Id="1" Enabled="true" ApplicationDeviceId="260" ApplicationDeviceVersion="1" Profile="HOME_AUTOMATION" Message="APP_msgZpsEvents_ZCL" Name="SWITCH">
+      <InputClusters Cluster="Basic" RxAPDU="WXKG02LM->apduZCL" Discoverable="true"/>
+      <InputClusters Cluster="Groups" RxAPDU="WXKG02LM->apduZCL" Discoverable="false"/>
+      <InputClusters Cluster="Identify" RxAPDU="WXKG02LM->apduZCL" Discoverable="true"/>
+      <InputClusters Cluster="OnOff" RxAPDU="WXKG02LM->apduZCL" Discoverable="false"/>
+      <InputClusters Cluster="LevelControl" RxAPDU="WXKG02LM->apduZCL" Discoverable="false"/>
+      <InputClusters Cluster="Scenes" RxAPDU="WXKG02LM->apduZCL" Discoverable="false"/>
+      <InputClusters Cluster="Default" RxAPDU="WXKG02LM->apduZCL" Discoverable="false"/>
+      <InputClusters Cluster="OTA" RxAPDU="WXKG02LM->apduZCL" Discoverable="false"/>
+      <OutputClusters Cluster="Basic" TxAPDUs="WXKG02LM->apduZCL" Discoverable="true"/>
+      <OutputClusters Cluster="Groups" TxAPDUs="WXKG02LM->apduZCL" Discoverable="true"/>
+      <OutputClusters Cluster="Identify" TxAPDUs="WXKG02LM->apduZCL" Discoverable="true"/>
+      <OutputClusters Cluster="OnOff" TxAPDUs="WXKG02LM->apduZCL" Discoverable="true"/>
+      <OutputClusters Cluster="LevelControl" TxAPDUs="WXKG02LM->apduZCL" Discoverable="true"/>
+      <OutputClusters Cluster="Scenes" TxAPDUs="WXKG02LM->apduZCL" Discoverable="true"/>
+      <OutputClusters Cluster="OTA" TxAPDUs="WXKG02LM->apduZCL" Discoverable="true"/>
+    </Endpoints>
+    <PDUConfiguration NumNPDUs="24" PDUMMutexName="mutexPDUM">
+      <APDUs Id="WXKG02LM->apduZDP" Name="apduZDP" Size="100" Instances="16"/>
+      <APDUs Id="WXKG02LM->apduZCL" Name="apduZCL" Size="100" Instances="15"/>
+    </PDUConfiguration>
+    <ChannelMask Channel11="true" Channel12="true" Channel13="true" Channel14="true" Channel15="true" Channel16="true" Channel17="true" Channel18="true" Channel19="true" Channel20="true" Channel21="true" Channel22="true" Channel23="true" Channel24="true" Channel25="true" Channel26="true"/>
+    <NodeDescriptor ManufacturerCode="4151" LogicalType="ZED" ComplexDescriptorAvailable="false" UserDescriptorAvailable="false" APSFlags="0" FrequencyBand="2.4GHz" AlternatePANCoordinator="false" DeviceType="false" PowerSource="true" RxOnWhenIdle="false" Security="false" AllocateAddress="true" MaximumBufferSize="127" MaximumIncomingTransferSize="100" MaximumOutgoingTransferSize="100" ExtendedActiveEndpointListAvailable="false" ExtendedSimpleDescriptorListAvailable="false" PrimaryTrustCenter="false" BackupTrustCenter="false" PrimaryBindingTableCache="false" BackupBindingTableCache="false" PrimaryDiscoveryCache="false" BackupDiscoveryCache="false" NetworkManager="false"/>
+    <NodePowerDescriptor ConstantPower="true" RechargeableBattery="false" DisposableBattery="false" DefaultPowerSource="Constant Power" DefaultPowerMode="Synchronised with RxOnWhenIdle"/>
+    <BindingTable Size="16"/>
+    <KeyDescriptorTable Size="1"/>
+    <ZDOServers>
+      <DefaultServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <ZdoClient OutputAPdu="WXKG02LM->apduZDP"/>
+      <DeviceAnnceServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <ActiveEpServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <NwkAddrServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <IeeeAddrServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <SystemServerDiscoveryServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <NodeDescServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <PowerDescServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <MatchDescServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <SimpleDescServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <MgmtLqiServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <MgmtLeaveServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <MgmtNWKUpdateServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <BindUnbindServer OutputAPdu="WXKG02LM->apduZDP"/>
+      <BindRequestServer OutputAPdu="WXKG02LM->apduZDP" SimultaneousRequests="0x000A" TimeInterval="0x0001"/>
+      <MgmtBindServer OutputAPdu="WXKG02LM->apduZDP"/>
     </ZDOServers>
   </ChildNodes>
 </zpscfg:ZigbeeWirelessNetwork>

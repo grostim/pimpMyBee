@@ -12467,12 +12467,12 @@ LOAD c:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
                 0x000000000008001c        0x2 SHORT 0x0
                 0x000000000008001e        0x2 SHORT 0x3 ABSOLUTE (_SwConfig)
                 0x0000000000080020                _enc_start = ABSOLUTE (.)
-                0x0000000000080020        0x4 LONG 0x3050c ABSOLUTE (_image_len)
+                0x0000000000080020        0x4 LONG 0x30518 ABSOLUTE (_image_len)
                 0x0000000000080024        0x4 LONG 0xafd68 ABSOLUTE (_flash_data_start)
                 0x0000000000080028        0x2 SHORT 0x13 ((ABSOLUTE (_ram_data_start) / 0x4) & 0xffff)
-                0x000000000008002a        0x2 SHORT 0x1e9 ((ABSOLUTE (_ram_data_len) / 0x4) & 0xffff)
-                0x000000000008002c        0x2 SHORT 0x1fc ((ABSOLUTE (_bss_start) / 0x4) & 0xffff)
-                0x000000000008002e        0x2 SHORT 0x10f7 ((ABSOLUTE (_bss_len) / 0x4) & 0xffff)
+                0x000000000008002a        0x2 SHORT 0x1ec ((ABSOLUTE (_ram_data_len) / 0x4) & 0xffff)
+                0x000000000008002c        0x2 SHORT 0x1ff ((ABSOLUTE (_bss_start) / 0x4) & 0xffff)
+                0x000000000008002e        0x2 SHORT 0x10f8 ((ABSOLUTE (_bss_len) / 0x4) & 0xffff)
                 0x0000000000080030        0x4 LONG 0x967b1 ABSOLUTE (AppWarmStart)
                 0x0000000000080034        0x4 LONG 0x96770 ABSOLUTE (AppColdStart)
                 0x0000000000000000                _enc_offset = (_enc_start & 0xf)
@@ -16777,7 +16777,7 @@ LOAD c:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
                 0x0000000000000000        0x0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
                 0x000000000400004c                . = ORIGIN (ram)
 
-.data           0x000000000400004c      0x7a4 load address 0x00000000000afd68
+.data           0x000000000400004c      0x7b0 load address 0x00000000000afd68
                 0x000000000400004c                _ram_data_start = ABSOLUTE (.)
  *(.data*)
  .data.os_Task_Tick_Task
@@ -16902,944 +16902,948 @@ LOAD c:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
                 0x0000000004000430        0x8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .data.s_sAplAib
                 0x0000000004000438       0x30 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ .data.s_au8Endpoint0InputClusterDiscFlags
+                0x0000000004000468        0xb c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .data.s_au8Endpoint1InputClusterDiscFlags
-                0x0000000004000468        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004000473        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .data.s_au8Endpoint1OutputClusterDiscFlags
-                0x0000000004000469        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- *fill*         0x000000000400046a        0x2 00
+                0x0000000004000474        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ *fill*         0x0000000004000475        0x3 00
  .data.s_asSimpleDescConts
-                0x000000000400046c       0x48 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004000478       0x48 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .data.s_sNodeDescriptor
-                0x00000000040004b4       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040004c0       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .data.s_sNodePowerDescriptor
-                0x00000000040004c4        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040004d0        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .data.s_sApsDuplicateTable
-                0x00000000040004c8       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040004d4       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .data.s_sApsmeCmdContainer_3
-                0x00000000040004d8       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040004e4       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .data.s_sApsmeCmdContainer_2
-                0x0000000004000510       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x000000000400051c       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .data.s_sApsmeCmdContainer_1
-                0x0000000004000548       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .data.s_sApl   0x0000000004000580      0x150 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004000554       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ .data.s_sApl   0x000000000400058c      0x150 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .data.zps_g_pvApl
-                0x00000000040006d0        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
-                0x00000000040006d0                zps_g_pvApl
+                0x00000000040006dc        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040006dc                zps_g_pvApl
  .data.u16ActiveEDAddress
-                0x00000000040006d4        0xa c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/AgeChildren.o
- *fill*         0x00000000040006de        0x2 00
+                0x00000000040006e0        0xa c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/AgeChildren.o
+ *fill*         0x00000000040006ea        0x2 00
  .data.u32Tick10ms.11389
-                0x00000000040006e0        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_zcl_outlet_task.o
+                0x00000000040006ec        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_zcl_outlet_task.o
  .data.u32Tick1Sec.11390
-                0x00000000040006e4        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_zcl_outlet_task.o
+                0x00000000040006f0        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_zcl_outlet_task.o
  .data.u32DefaultChannelMask
-                0x00000000040006e8        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
+                0x00000000040006f4        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
  .data.u8ButtonDebounce
-                0x00000000040006ec        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/DriverOutlet_.o
+                0x00000000040006f8        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/DriverOutlet_.o
  .data.s_au8LnkKeyArray
-                0x00000000040006ed       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haKeys.o
-                0x00000000040006ed                s_au8LnkKeyArray
- *fill*         0x00000000040006fd        0x3 00
+                0x00000000040006f9       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haKeys.o
+                0x00000000040006f9                s_au8LnkKeyArray
+ *fill*         0x0000000004000709        0x3 00
  .data.sCLD_Basic
-                0x0000000004000700       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Basic.o
-                0x0000000004000700                sCLD_Basic
+                0x000000000400070c       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Basic.o
+                0x000000000400070c                sCLD_Basic
  .data.sCLD_Groups
-                0x0000000004000710       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Groups.o
-                0x0000000004000710                sCLD_Groups
+                0x000000000400071c       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Groups.o
+                0x000000000400071c                sCLD_Groups
  .data.sCLD_Identify
-                0x0000000004000720       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Identify.o
-                0x0000000004000720                sCLD_Identify
+                0x000000000400072c       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Identify.o
+                0x000000000400072c                sCLD_Identify
  .data.sCLD_OnOffSceneExtensionTable
-                0x0000000004000730        0xc c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/OnOff.o
-                0x0000000004000730                sCLD_OnOffSceneExtensionTable
+                0x000000000400073c        0xc c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/OnOff.o
+                0x000000000400073c                sCLD_OnOffSceneExtensionTable
  .data.sCLD_OnOff
-                0x000000000400073c       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/OnOff.o
-                0x000000000400073c                sCLD_OnOff
+                0x0000000004000748       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/OnOff.o
+                0x0000000004000748                sCLD_OnOff
  .data.asCLD_ScenesClusterAttributeDefinitions
-                0x000000000400074c       0x30 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Scenes.o
-                0x000000000400074c                asCLD_ScenesClusterAttributeDefinitions
+                0x0000000004000758       0x30 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Scenes.o
+                0x0000000004000758                asCLD_ScenesClusterAttributeDefinitions
  .data.sCLD_Scenes
-                0x000000000400077c       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Scenes.o
-                0x000000000400077c                sCLD_Scenes
+                0x0000000004000788       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Scenes.o
+                0x0000000004000788                sCLD_Scenes
  .data.s_prvErrorHook
-                0x000000000400078c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
+                0x0000000004000798        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
  .data.s_prbMemberCheck
-                0x0000000004000790        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
+                0x000000000400079c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
  .data.gZpsSetDefaultEndpoint
-                0x0000000004000794        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_af_apsde.o)
+                0x00000000040007a0        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_af_apsde.o)
  .data.bTimerQFirst.11334
-                0x0000000004000796        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_task.o)
+                0x00000000040007a2        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_task.o)
  .data.g_bEnableRouteDiscovery
-                0x0000000004000797        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
-                0x0000000004000797                g_bEnableRouteDiscovery
+                0x00000000040007a3        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
+                0x00000000040007a3                g_bEnableRouteDiscovery
  .data.bCanLoopback
-                0x0000000004000798        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
+                0x00000000040007a4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
  .data.g_bZpsRxInCcaOn
-                0x000000000400079c        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x000000000400079c                g_bZpsRxInCcaOn
- *fill*         0x000000000400079d        0x1 00
+                0x00000000040007a8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x00000000040007a8                g_bZpsRxInCcaOn
+ *fill*         0x00000000040007a9        0x1 00
  .data.g_u16ZpsWaitTime
-                0x000000000400079e        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x000000000400079e                g_u16ZpsWaitTime
+                0x00000000040007aa        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x00000000040007aa                g_u16ZpsWaitTime
  .data.g_u8ZpsMaxBe
-                0x00000000040007a0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x00000000040007a0                g_u8ZpsMaxBe
+                0x00000000040007ac        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x00000000040007ac                g_u8ZpsMaxBe
  .data.g_u8ZpsMinBe
-                0x00000000040007a1        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x00000000040007a1                g_u8ZpsMinBe
+                0x00000000040007ad        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x00000000040007ad                g_u8ZpsMinBe
  .data.g_u8ZpsDefaultFilterValue
-                0x00000000040007a2        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
-                0x00000000040007a2                g_u8ZpsDefaultFilterValue
+                0x00000000040007ae        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
+                0x00000000040007ae                g_u8ZpsDefaultFilterValue
  .data.g_bMcpsFilterEnable
-                0x00000000040007a3        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
-                0x00000000040007a3                g_bMcpsFilterEnable
+                0x00000000040007af        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
+                0x00000000040007af                g_bMcpsFilterEnable
  .data.g_u8BackStopTimerSec
-                0x00000000040007a4        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bound_data_request_manager.o)
-                0x00000000040007a4                g_u8BackStopTimerSec
- *fill*         0x00000000040007a5        0x3 00
+                0x00000000040007b0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bound_data_request_manager.o)
+                0x00000000040007b0                g_u8BackStopTimerSec
+ *fill*         0x00000000040007b1        0x3 00
  .data.DBG_u32Flags
-                0x00000000040007a8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
-                0x00000000040007a8                DBG_u32Flags
+                0x00000000040007b4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
+                0x00000000040007b4                DBG_u32Flags
  .data.bIsNewline
-                0x00000000040007ac        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
+                0x00000000040007b8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
  .data.u8AhiBaudRate
-                0x00000000040007ad        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg_uart.o)
+                0x00000000040007b9        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg_uart.o)
  .data.bResolvedConflictAllowed
-                0x00000000040007ae        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
-                0x00000000040007ae                bResolvedConflictAllowed
+                0x00000000040007ba        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
+                0x00000000040007ba                bResolvedConflictAllowed
  .data.u8BeaconSample
-                0x00000000040007af        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
-                0x00000000040007af                u8BeaconSample
+                0x00000000040007bb        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
+                0x00000000040007bb                u8BeaconSample
  .data.g_bSendBuffered
-                0x00000000040007b0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_rt.o)
-                0x00000000040007b0                g_bSendBuffered
+                0x00000000040007bc        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_rt.o)
+                0x00000000040007bc                g_bSendBuffered
  .data.g_u8ZpsExpiryMaxCount
-                0x00000000040007b1        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_rt.o)
-                0x00000000040007b1                g_u8ZpsExpiryMaxCount
- *fill*         0x00000000040007b2        0x2 00
+                0x00000000040007bd        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_rt.o)
+                0x00000000040007bd                g_u8ZpsExpiryMaxCount
+ *fill*         0x00000000040007be        0x2 00
  .data.u32ScanAttemptDelayTime
-                0x00000000040007b4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_disc.o)
-                0x00000000040007b4                u32ScanAttemptDelayTime
+                0x00000000040007c0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_disc.o)
+                0x00000000040007c0                u32ScanAttemptDelayTime
  .data.zps_pacNwkFrmStdLongFmt
-                0x00000000040007b8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_frm.o)
-                0x00000000040007b8                zps_pacNwkFrmStdLongFmt
- .data.zps_pacNwkFrmStdHalfFmt
-                0x00000000040007bc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_frm.o)
-                0x00000000040007bc                zps_pacNwkFrmStdHalfFmt
- .data.zps_pacNwkFrmStdByteFmt
-                0x00000000040007c0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_frm.o)
-                0x00000000040007c0                zps_pacNwkFrmStdByteFmt
- .data.zps_pacNwkFrmStdHdrFmt
                 0x00000000040007c4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_frm.o)
-                0x00000000040007c4                zps_pacNwkFrmStdHdrFmt
+                0x00000000040007c4                zps_pacNwkFrmStdLongFmt
+ .data.zps_pacNwkFrmStdHalfFmt
+                0x00000000040007c8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_frm.o)
+                0x00000000040007c8                zps_pacNwkFrmStdHalfFmt
+ .data.zps_pacNwkFrmStdByteFmt
+                0x00000000040007cc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_frm.o)
+                0x00000000040007cc                zps_pacNwkFrmStdByteFmt
+ .data.zps_pacNwkFrmStdHdrFmt
+                0x00000000040007d0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_frm.o)
+                0x00000000040007d0                zps_pacNwkFrmStdHdrFmt
  .data.bTurnDefaultSourceRouting
-                0x00000000040007c8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_join.o)
-                0x00000000040007c8                bTurnDefaultSourceRouting
+                0x00000000040007d4        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_join.o)
+                0x00000000040007d4                bTurnDefaultSourceRouting
  .data.u8MiniMacConfig_MaxConcurrentAssocResponses
-                0x00000000040007c9        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Association.o)
-                0x00000000040007c9                u8MiniMacConfig_MaxConcurrentAssocResponses
- *fill*         0x00000000040007ca        0x2 00
+                0x00000000040007d5        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Association.o)
+                0x00000000040007d5                u8MiniMacConfig_MaxConcurrentAssocResponses
+ *fill*         0x00000000040007d6        0x2 00
  .data.psShadowRxBuffer
-                0x00000000040007cc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Running.o)
-                0x00000000040007cc                psShadowRxBuffer
+                0x00000000040007d8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Running.o)
+                0x00000000040007d8                psShadowRxBuffer
  .data.i8MMAC_HpmTxMaxPowerCh26
-                0x00000000040007d0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
+                0x00000000040007dc        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
  .data.i8MMAC_HpmTxMaxPower
-                0x00000000040007d1        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
- *fill*         0x00000000040007d2        0x2 00
- .data.TST_mod  0x00000000040007d4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
+                0x00000000040007dd        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
+ *fill*         0x00000000040007de        0x2 00
+ .data.TST_mod  0x00000000040007e0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
  .data.eMaxInputLevel
-                0x00000000040007d8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioSettings_JN5169.o)
- *fill*         0x00000000040007d9        0x3 00
+                0x00000000040007e4        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioSettings_JN5169.o)
+ *fill*         0x00000000040007e5        0x3 00
  .data.u32HeapEnd
-                0x00000000040007dc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libBoot_JN516x.a(Heap.o)
-                0x00000000040007dc                u32HeapEnd
+                0x00000000040007e8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libBoot_JN516x.a(Heap.o)
+                0x00000000040007e8                u32HeapEnd
  .data.u32HeapStart
-                0x00000000040007e0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libBoot_JN516x.a(Heap.o)
-                0x00000000040007e0                u32HeapStart
+                0x00000000040007ec        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libBoot_JN516x.a(Heap.o)
+                0x00000000040007ec                u32HeapStart
  .data.prHeap_AllocFunc
-                0x00000000040007e4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libBoot_JN516x.a(Heap.o)
-                0x00000000040007e4                prHeap_AllocFunc
+                0x00000000040007f0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libBoot_JN516x.a(Heap.o)
+                0x00000000040007f0                prHeap_AllocFunc
  .data.u8MacNwkTriesTimeout
-                0x00000000040007e8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040007e8                u8MacNwkTriesTimeout
- *fill*         0x00000000040007e9        0x1 00
+                0x00000000040007f4        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x00000000040007f4                u8MacNwkTriesTimeout
+ *fill*         0x00000000040007f5        0x1 00
  .data.u16AvApsMessageTxRetry
-                0x00000000040007ea        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040007ea                u16AvApsMessageTxRetry
+                0x00000000040007f6        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x00000000040007f6                u16AvApsMessageTxRetry
  .data.u16StoredMacSeqNo
-                0x00000000040007ec        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040007ec                u16StoredMacSeqNo
+                0x00000000040007f8        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x00000000040007f8                u16StoredMacSeqNo
  .data.u8StoredCsma
-                0x00000000040007ee        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040007ee                u8StoredCsma
+                0x00000000040007fa        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x00000000040007fa                u8StoredCsma
  .data.u8StoredMinBe
-                0x00000000040007ef        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040007ef                u8StoredMinBe
+                0x00000000040007fb        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x00000000040007fb                u8StoredMinBe
  *(.data.*)
-                0x00000000040007f0                . = ALIGN (0x4)
-                0x00000000040007f0                _ram_data_end = ABSOLUTE (.)
+                0x00000000040007fc                . = ALIGN (0x4)
+                0x00000000040007fc                _ram_data_end = ABSOLUTE (.)
 
-.bss            0x00000000040007f0     0x43dc load address 0x00000000000b050c
-                0x00000000040007f0                _bss_start = ABSOLUTE (.)
+.bss            0x00000000040007fc     0x43e0 load address 0x00000000000b0518
+                0x00000000040007fc                _bss_start = ABSOLUTE (.)
  *(.bss*)
  .bss.s_aMessageData_zps_msgMlmeDcfmInd
-                0x00000000040007f0      0x160 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
+                0x00000000040007fc      0x160 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
  .bss.s_aMessageData_zps_msgTimeEvents
-                0x0000000004000950       0x60 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
+                0x000000000400095c       0x60 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
  .bss.s_aMessageData_zps_msgMcpsDcfmInd
-                0x00000000040009b0      0x2c0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
+                0x00000000040009bc      0x2c0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
  .bss.s_aMessageData_zps_msgMcpsDcfm
-                0x0000000004000c70       0x20 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
+                0x0000000004000c7c       0x20 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
+ *fill*         0x0000000004000c9c        0x4 00
  .bss.s_aMessageData_APP_msgZpsEvents
-                0x0000000004000c90      0x140 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
+                0x0000000004000ca0      0x140 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
  .bss.s_aMessageData_APP_msgEvents
-                0x0000000004000dd0       0x30 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
+                0x0000000004000de0       0x30 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
  .bss.s_aMessageData_APP_msgZpsEvents_ZCL
-                0x0000000004000e00      0x140 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
+                0x0000000004000e10      0x140 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
  .bss.s_aMessageData_APP_msgPOREvents
-                0x0000000004000f40        0xc c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
+                0x0000000004000f50        0xc c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/os_gen.o
  .bss.s_asNPduPool
-                0x0000000004000f4c      0xc80 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004000f5c      0xc80 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZDPInstance0Storage
-                0x0000000004001bcc       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001bdc       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZDPInstance1Storage
-                0x0000000004001c30       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001c40       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZDPInstance2Storage
-                0x0000000004001c94       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001ca4       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZCLInstance0Storage
-                0x0000000004001cf8       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001d08       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZCLInstance1Storage
-                0x0000000004001d5c       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001d6c       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZCLInstance2Storage
-                0x0000000004001dc0       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001dd0       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZCLInstance3Storage
-                0x0000000004001e24       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001e34       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZCLInstance4Storage
-                0x0000000004001e88       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001e98       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZCLInstance5Storage
-                0x0000000004001eec       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001efc       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZCLInstance6Storage
-                0x0000000004001f50       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001f60       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZCLInstance7Storage
-                0x0000000004001fb4       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004001fc4       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZCLInstance8Storage
-                0x0000000004002018       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x0000000004002028       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.s_au8apduZCLInstance9Storage
-                0x000000000400207c       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
+                0x000000000400208c       0x64 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/pdum_gen.o
  .bss.g_psGreenPowerContext
-                0x00000000040020e0        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
-                0x00000000040020e0                g_psGreenPowerContext
- *fill*         0x00000000040020e4        0x4 00
+                0x00000000040020f0        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040020f0                g_psGreenPowerContext
+ *fill*         0x00000000040020f4        0x4 00
  .bss.s_bindingTableStorage
-                0x00000000040020e8      0x100 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040020f8      0x100 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_groupTableStorage
-                0x00000000040021e8      0x240 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040021f8      0x240 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_groupTablePdmStorage
-                0x0000000004002428       0x40 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004002438       0x40 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_sDefaultServerContext
-                0x0000000004002468        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sZdoClientContext
-                0x000000000400246c        0x8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sDeviceAnnceServerContext
-                0x0000000004002474        0x0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sActiveEpServerContext
-                0x0000000004002474        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sNwkAddrServerContext
                 0x0000000004002478        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sIeeeAddrServerContext
-                0x000000000400247c        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sSystemServerDiscoveryServerContext
-                0x0000000004002480        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sNodeDescServerContext
+ .bss.s_sZdoClientContext
+                0x000000000400247c        0x8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ .bss.s_sDeviceAnnceServerContext
+                0x0000000004002484        0x0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ .bss.s_sActiveEpServerContext
                 0x0000000004002484        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sPowerDescServerContext
+ .bss.s_sNwkAddrServerContext
                 0x0000000004002488        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sMatchDescServerContext
+ .bss.s_sIeeeAddrServerContext
                 0x000000000400248c        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sSimpleDescServerContext
+ .bss.s_sSystemServerDiscoveryServerContext
                 0x0000000004002490        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_sMgmtLqiServerContext
+ .bss.s_sNodeDescServerContext
                 0x0000000004002494        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ .bss.s_sPowerDescServerContext
+                0x0000000004002498        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ .bss.s_sMatchDescServerContext
+                0x000000000400249c        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ .bss.s_sSimpleDescServerContext
+                0x00000000040024a0        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ .bss.s_sMgmtLqiServerContext
+                0x00000000040024a4        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_sMgmtLeaveServerContext
-                0x0000000004002498       0x28 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040024a8       0x28 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_sMgmtNWKUpdateServerContext
-                0x00000000040024c0       0x40 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040024d0       0x40 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_sBindUnbindServerContext
-                0x0000000004002500       0x40 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004002510       0x40 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_sBindRequestServerContext
-                0x0000000004002540       0x5c c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004002550       0x5c c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_sBindRequestServerAcksDcfmContext
-                0x000000000400259c        0xc c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040025ac        0xc c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_sPermitJoiningServerContext
-                0x00000000040025a8        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040025b8        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_sMgmtRtgServerContext
-                0x00000000040025ac        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- .bss.s_au8Endpoint0InputClusterDiscFlags
-                0x00000000040025b0        0xb c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040025bc        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_au8Endpoint0OutputClusterDiscFlags
-                0x00000000040025bb        0xb c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040025c0        0xb c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ *fill*         0x00000000040025cb        0x1 00
  .bss.s_au16ApsDuplicateTableAddrs
-                0x00000000040025c6        0xa c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040025cc        0xa c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ *fill*         0x00000000040025d6        0x2 00
  .bss.s_au32ApsDuplicateTableHash
-                0x00000000040025d0       0x14 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040025d8       0x14 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_au8ApsDuplicateTableSeqCnts
-                0x00000000040025e4        0x5 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
- *fill*         0x00000000040025e9        0x7 00
+                0x00000000040025ec        0x5 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ *fill*         0x00000000040025f1        0x7 00
  .bss.s_asApsSyncMsgPool
-                0x00000000040025f0       0xf0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040025f8       0xf0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_asApsDcfmRecordPool
-                0x00000000040026e0       0x50 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040026e8       0x50 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_sApsmeCmdContainer_4
-                0x0000000004002730       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004002738       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_sNwkContext
-                0x0000000004002768      0x6f8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004002770      0x6f8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_asNwkNtDisc
-                0x0000000004002e60      0x180 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004002e68      0x180 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_asNwkNtActv
-                0x0000000004002fe0      0x180 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004002fe8      0x180 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_asNwkRtDisc
-                0x0000000004003160       0x28 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004003168       0x28 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_asNwkRt
-                0x0000000004003188      0x2d0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004003190      0x2d0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_asNwkBtt
-                0x0000000004003458      0x118 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004003460      0x118 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_asNwkRct
-                0x0000000004003570       0x70 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004003578       0x70 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+ *fill*         0x00000000040035e8        0x8 00
  .bss.s_asNwkSecMatSet
-                0x00000000040035e0       0x40 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040035f0       0x40 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_asNwkInFCSet
-                0x0000000004003620       0x60 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004003630       0x60 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_au16NwkAddrMapNwk
-                0x0000000004003680       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004003690       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_au16NwkAddrMapLookup
-                0x00000000040036b8       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x00000000040036c8       0x38 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.s_au64NwkAddrMapExt
-                0x00000000040036f0      0x140 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
+                0x0000000004003700      0x140 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zps_gen.o
  .bss.asSavedReports
-                0x0000000004003830       0x20 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_reporting.o
+                0x0000000004003840       0x20 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_reporting.o
  .bss.u8ChildOfInterest
-                0x0000000004003850        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/AgeChildren.o
+                0x0000000004003860        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/AgeChildren.o
  .bss.u8ChildAgingAttempt
-                0x0000000004003851        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/AgeChildren.o
- *fill*         0x0000000004003852        0x2 00
+                0x0000000004003861        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/AgeChildren.o
+ *fill*         0x0000000004003862        0x2 00
  .bss.s_u32CompareTime
-                0x0000000004003854        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_timer_driver.o
+                0x0000000004003864        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_timer_driver.o
  .bss.s_u32LastExpiredTime
-                0x0000000004003858        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_timer_driver.o
+                0x0000000004003868        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_timer_driver.o
  .bss.sScenesCustomData
-                0x000000000400385c      0x1a0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_scenes.o
+                0x000000000400386c      0x1a0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_scenes.o
  .bss.bResetFactoryNew
-                0x00000000040039fc        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zha_outlet_node.o
-                0x00000000040039fc                bResetFactoryNew
- *fill*         0x00000000040039fd        0x3 00
+                0x0000000004003a0c        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zha_outlet_node.o
+                0x0000000004003a0c                bResetFactoryNew
+ *fill*         0x0000000004003a0d        0x3 00
  .bss.sEZModeData
-                0x0000000004003a00      0x168 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzFindAndBind.o
+                0x0000000004003a10      0x168 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzFindAndBind.o
  .bss.u32BackOffTime
-                0x0000000004003b68        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
-                0x0000000004003b68                u32BackOffTime
- *fill*         0x0000000004003b6c        0x4 00
+                0x0000000004003b78        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
+                0x0000000004003b78                u32BackOffTime
+ *fill*         0x0000000004003b7c        0x4 00
  .bss.sEZModeData
-                0x0000000004003b70       0x88 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
- .bss.bRejoin   0x0000000004003bf8        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
- *fill*         0x0000000004003bf9        0x3 00
+                0x0000000004003b80       0x88 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
+ .bss.bRejoin   0x0000000004003c08        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
+ *fill*         0x0000000004003c09        0x3 00
  .bss.sBeaconFilter
-                0x0000000004003bfc        0xc c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
+                0x0000000004003c0c        0xc c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
  .bss.au64ExtPanList
-                0x0000000004003c08        0x8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
+                0x0000000004003c18        0x8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
  .bss.u8ChannelIndex.9389
-                0x0000000004003c10        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
- *fill*         0x0000000004003c11        0x3 00
+                0x0000000004003c20        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/haEzJoin.o
+ *fill*         0x0000000004003c21        0x3 00
  .bss.sPowerOnCounts
-                0x0000000004003c14        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_power_on_counter.o
+                0x0000000004003c24        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_power_on_counter.o
  .bss.bPreInitFunctionCalled
-                0x0000000004003c18        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_power_on_counter.o
- *fill*         0x0000000004003c19        0x3 00
+                0x0000000004003c28        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_power_on_counter.o
+ *fill*         0x0000000004003c29        0x3 00
  .bss.psBeaconFilter
-                0x0000000004003c1c        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/appZpsBeaconHandler.o
-                0x0000000004003c1c                psBeaconFilter
+                0x0000000004003c2c        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/appZpsBeaconHandler.o
+                0x0000000004003c2c                psBeaconFilter
  .bss.bOutputOn
-                0x0000000004003c20        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/DriverOutlet_.o
+                0x0000000004003c30        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/DriverOutlet_.o
  .bss.bStatusLedOn
-                0x0000000004003c21        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/DriverOutlet_.o
+                0x0000000004003c31        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/DriverOutlet_.o
  .bss.u8ButtonState
-                0x0000000004003c22        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/DriverOutlet_.o
+                0x0000000004003c32        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/DriverOutlet_.o
  .bss.bTimerRegistered.9625
-                0x0000000004003c23        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Identify.o
+                0x0000000004003c33        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Identify.o
  .bss.bFlag_SaveScenesNVM
-                0x0000000004003c24        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/ScenesClusterManagement.o
-                0x0000000004003c24                bFlag_SaveScenesNVM
- *fill*         0x0000000004003c25        0x3 00
+                0x0000000004003c34        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/ScenesClusterManagement.o
+                0x0000000004003c34                bFlag_SaveScenesNVM
+ *fill*         0x0000000004003c35        0x3 00
  .bss.u32ZCL_Heap
-                0x0000000004003c28      0x138 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/ha.o
+                0x0000000004003c38      0x138 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/ha.o
  .bss.sZCL_Common
-                0x0000000004003d60       0xf8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl.o
+                0x0000000004003d70       0xf8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl.o
  .bss.u8NumberOfRegEndpoints
-                0x0000000004003e58        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl.o
- *fill*         0x0000000004003e59        0x3 00
+                0x0000000004003e68        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl.o
+ *fill*         0x0000000004003e69        0x3 00
  .bss.prfnbZCLIsManufacturerCodeSupported
-                0x0000000004003e5c        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl_search.o
+                0x0000000004003e6c        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl_search.o
  .bss.s_u32CurrentPriorityMask
-                0x0000000004003e60        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
+                0x0000000004003e70        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
  .bss.s_prvUnclaimedISR
-                0x0000000004003e64        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
- .bss.s_u32PendingQueue
-                0x0000000004003e68        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
- .bss.s_asTasks
-                0x0000000004003e6c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
- .bss.s_u8OSLevelIPL
-                0x0000000004003e70        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
- *fill*         0x0000000004003e71        0x3 00
- .bss.s_psCurrentTask
                 0x0000000004003e74        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
- .bss.s_prvCurrentISR
+ .bss.s_u32PendingQueue
                 0x0000000004003e78        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
+ .bss.s_asTasks
+                0x0000000004003e7c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
+ .bss.s_u8OSLevelIPL
+                0x0000000004003e80        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
+ *fill*         0x0000000004003e81        0x3 00
+ .bss.s_psCurrentTask
+                0x0000000004003e84        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
+ .bss.s_prvCurrentISR
+                0x0000000004003e88        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
  .bss.pwrm_CPUContext
-                0x0000000004003e7c       0x24 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
-                0x0000000004003e7c                pwrm_CPUContext
+                0x0000000004003e8c       0x24 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
+                0x0000000004003e8c                pwrm_CPUContext
  .bss.s_bWakeTimerActive
-                0x0000000004003ea0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
- *fill*         0x0000000004003ea1        0x1 00
+                0x0000000004003eb0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
+ *fill*         0x0000000004003eb1        0x1 00
  .bss.s_u16ActivityCounter
-                0x0000000004003ea2        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
-                0x0000000004003ea2                s_u16ActivityCounter
+                0x0000000004003eb2        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
+                0x0000000004003eb2                s_u16ActivityCounter
  .bss.pwrm_psWakeupCallbacks
-                0x0000000004003ea4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
-                0x0000000004003ea4                pwrm_psWakeupCallbacks
+                0x0000000004003eb4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
+                0x0000000004003eb4                pwrm_psWakeupCallbacks
  .bss.s_ePowerMode
-                0x0000000004003ea8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
- *fill*         0x0000000004003ea9        0x3 00
+                0x0000000004003eb8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
+ *fill*         0x0000000004003eb9        0x3 00
  .bss.u32CalibrationValue
-                0x0000000004003eac        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
+                0x0000000004003ebc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
  .bss.psNextWake
-                0x0000000004003eb0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
- .bss.s_hMutex  0x0000000004003eb4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
+                0x0000000004003ec0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
+ .bss.s_hMutex  0x0000000004003ec4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
  .bss.s_psFreeListHead
-                0x0000000004003eb8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
- .bss.u8Count   0x0000000004003ebc        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
+                0x0000000004003ec8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
+ .bss.u8Count   0x0000000004003ecc        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
  .bss.u8MaxNpdu
-                0x0000000004003ebd        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
- *fill*         0x0000000004003ebe        0x2 00
+                0x0000000004003ecd        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
+ *fill*         0x0000000004003ece        0x2 00
  .bss.s_psNPduPoolStart
-                0x0000000004003ec0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
+                0x0000000004003ed0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
  .bss.s_psNPduPoolEnd
-                0x0000000004003ec4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
+                0x0000000004003ed4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
  .bss.s_asAPduPool
-                0x0000000004003ec8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
- .bss.s_hMutex  0x0000000004003ecc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
+                0x0000000004003ed8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
+ .bss.s_hMutex  0x0000000004003edc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
  .bss.u8ApduCount
-                0x0000000004003ed0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
+                0x0000000004003ee0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
  .bss.u8MaxApdu
-                0x0000000004003ed1        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
+                0x0000000004003ee1        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
  .bss.s_u16NumAPdus
-                0x0000000004003ed2        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
+                0x0000000004003ee2        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
  .bss.pfOverrideProfile
-                0x0000000004003ed4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_af.o)
-                0x0000000004003ed4                pfOverrideProfile
+                0x0000000004003ee4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_af.o)
+                0x0000000004003ee4                pfOverrideProfile
  .bss.gZpsSetByProfile
-                0x0000000004003ed8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_af_apsde.o)
- *fill*         0x0000000004003ed9        0x3 00
+                0x0000000004003ee8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_af_apsde.o)
+ *fill*         0x0000000004003ee9        0x3 00
  .bss.psFreeMsgListHead
-                0x0000000004003edc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
-                0x0000000004003edc                psFreeMsgListHead
+                0x0000000004003eec        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
+                0x0000000004003eec                psFreeMsgListHead
  .bss.psActiveMsgListHead
-                0x0000000004003ee0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
-                0x0000000004003ee0                psActiveMsgListHead
+                0x0000000004003ef0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
+                0x0000000004003ef0                psActiveMsgListHead
  .bss.sAplApsdeLoopbackData
-                0x0000000004003ee4       0x30 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
+                0x0000000004003ef4       0x30 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
  .bss.bLocked.11461
-                0x0000000004003f14        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
+                0x0000000004003f24        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
  .bss.u8FailCount.11526
-                0x0000000004003f18        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
- *fill*         0x0000000004003f19        0x3 00
+                0x0000000004003f28        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
+ *fill*         0x0000000004003f29        0x3 00
  .bss.sAplApsdePostLoopbackData
-                0x0000000004003f1c       0x30 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
+                0x0000000004003f2c       0x30 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
  .bss.sApsmeResendTmr
-                0x0000000004003f4c       0x1c c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsme.o)
-                0x0000000004003f4c                sApsmeResendTmr
+                0x0000000004003f5c       0x1c c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsme.o)
+                0x0000000004003f5c                sApsmeResendTmr
  .bss.sApsmeCmdResend
-                0x0000000004003f68       0x20 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsme.o)
-                0x0000000004003f68                sApsmeCmdResend
+                0x0000000004003f78       0x20 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsme.o)
+                0x0000000004003f78                sApsmeCmdResend
  .bss.bZpsSendingApsAck
-                0x0000000004003f88        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_aps_nlde.o)
-                0x0000000004003f88                bZpsSendingApsAck
- *fill*         0x0000000004003f89        0x3 00
+                0x0000000004003f98        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_aps_nlde.o)
+                0x0000000004003f98                bZpsSendingApsAck
+ *fill*         0x0000000004003f99        0x3 00
  .bss.psAplDefaultZLLAPSLinkKey
-                0x0000000004003f8c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_aib.o)
-                0x0000000004003f8c                psAplDefaultZLLAPSLinkKey
+                0x0000000004003f9c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_aib.o)
+                0x0000000004003f9c                psAplDefaultZLLAPSLinkKey
  .bss.apvAplPdmRecordsAddress
-                0x0000000004003f90       0x18 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x0000000004003f90                apvAplPdmRecordsAddress
+                0x0000000004003fa0       0x18 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x0000000004003fa0                apvAplPdmRecordsAddress
  .bss.au16AplPdmRecordsSize
-                0x0000000004003fa8        0xc c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x0000000004003fa8                au16AplPdmRecordsSize
- *fill*         0x0000000004003fb4        0x4 00
+                0x0000000004003fb8        0xc c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x0000000004003fb8                au16AplPdmRecordsSize
+ *fill*         0x0000000004003fc4        0x4 00
  .bss.sRecoverDevice
-                0x0000000004003fb8       0x30 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x0000000004003fb8                sRecoverDevice
+                0x0000000004003fc8       0x30 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x0000000004003fc8                sRecoverDevice
  .bss.g_bReverToOldParent
-                0x0000000004003fe8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x0000000004003fe8                g_bReverToOldParent
+                0x0000000004003ff8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x0000000004003ff8                g_bReverToOldParent
  .bss.g_bOverrideOrphanUpdate
-                0x0000000004003fe9        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x0000000004003fe9                g_bOverrideOrphanUpdate
- *fill*         0x0000000004003fea        0x2 00
+                0x0000000004003ff9        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x0000000004003ff9                g_bOverrideOrphanUpdate
+ *fill*         0x0000000004003ffa        0x2 00
  .bss.prvZdoLeaveActionDecider
-                0x0000000004003fec        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x0000000004003fec                prvZdoLeaveActionDecider
+                0x0000000004003ffc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x0000000004003ffc                prvZdoLeaveActionDecider
  .bss.pfnHandleZllDeviceJoin
-                0x0000000004003ff0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
-                0x0000000004003ff0                pfnHandleZllDeviceJoin
+                0x0000000004004000        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+                0x0000000004004000                pfnHandleZllDeviceJoin
  .bss.pfZdpEventfunc
-                0x0000000004003ff4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_handle_zdp_event.o)
-                0x0000000004003ff4                pfZdpEventfunc
+                0x0000000004004004        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_handle_zdp_event.o)
+                0x0000000004004004                pfZdpEventfunc
  .bss.pu16CallbackClusterList
-                0x0000000004003ff8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_handle_zdp_event.o)
-                0x0000000004003ff8                pu16CallbackClusterList
+                0x0000000004004008        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_handle_zdp_event.o)
+                0x0000000004004008                pu16CallbackClusterList
  .bss.u8SizeOfCallbackList
-                0x0000000004003ffc        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_handle_zdp_event.o)
-                0x0000000004003ffc                u8SizeOfCallbackList
+                0x000000000400400c        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_handle_zdp_event.o)
+                0x000000000400400c                u8SizeOfCallbackList
  .bss.g_bStopZdpAcks
-                0x0000000004003ffd        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_common.o)
-                0x0000000004003ffd                g_bStopZdpAcks
+                0x000000000400400d        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_common.o)
+                0x000000000400400d                g_bStopZdpAcks
  .bss.bDefaultServerIgnoreHandleMgmtUpdate
-                0x0000000004003ffe        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_default_server.o)
-                0x0000000004003ffe                bDefaultServerIgnoreHandleMgmtUpdate
- *fill*         0x0000000004003fff        0x1 00
+                0x000000000400400e        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_default_server.o)
+                0x000000000400400e                bDefaultServerIgnoreHandleMgmtUpdate
+ *fill*         0x000000000400400f        0x1 00
  .bss.u32BroadcastRejectedCount
-                0x0000000004004000        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
-                0x0000000004004000                u32BroadcastRejectedCount
- .bss.u32DataQueueCount
-                0x0000000004004004        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
-                0x0000000004004004                u32DataQueueCount
- .bss.pfZGPSupported
-                0x0000000004004008        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
-                0x0000000004004008                pfZGPSupported
- .bss.s_psVsMcpsDcfmInd
-                0x000000000400400c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
- .bss.s_psMacDcfmInd
                 0x0000000004004010        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
+                0x0000000004004010                u32BroadcastRejectedCount
+ .bss.u32DataQueueCount
+                0x0000000004004014        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
+                0x0000000004004014                u32DataQueueCount
+ .bss.pfZGPSupported
+                0x0000000004004018        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
+                0x0000000004004018                pfZGPSupported
+ .bss.s_psVsMcpsDcfmInd
+                0x000000000400401c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
+ .bss.s_psMacDcfmInd
+                0x0000000004004020        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
  .bss.pfAliasAddressPresent
-                0x0000000004004014        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_device_annce_server.o)
-                0x0000000004004014                pfAliasAddressPresent
+                0x0000000004004024        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_device_annce_server.o)
+                0x0000000004004024                pfAliasAddressPresent
  .bss.bDisableSourceRouting
-                0x0000000004004018        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_device_annce_server.o)
-                0x0000000004004018                bDisableSourceRouting
+                0x0000000004004028        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_device_annce_server.o)
+                0x0000000004004028                bDisableSourceRouting
  .bss.g_bDisallowEdLeave
-                0x0000000004004019        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_mgmt_leave_server.o)
-                0x0000000004004019                g_bDisallowEdLeave
- *fill*         0x000000000400401a        0x2 00
+                0x0000000004004029        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_mgmt_leave_server.o)
+                0x0000000004004029                g_bDisallowEdLeave
+ *fill*         0x000000000400402a        0x2 00
  .bss.pfBindAllowed
-                0x000000000400401c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bind_unbind_server.o)
-                0x000000000400401c                pfBindAllowed
+                0x000000000400402c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bind_unbind_server.o)
+                0x000000000400402c                pfBindAllowed
  .bss.psBindUnbindServerContext
-                0x0000000004004020        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bind_unbind_server.o)
-                0x0000000004004020                psBindUnbindServerContext
+                0x0000000004004030        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bind_unbind_server.o)
+                0x0000000004004030                psBindUnbindServerContext
  .bss.psServerContextCopy
-                0x0000000004004024        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bound_data_request_manager.o)
-                0x0000000004004024                psServerContextCopy
- .bss.s_u32x    0x0000000004004028        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libRandom_JN516x.a(rnd_main.o)
+                0x0000000004004034        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bound_data_request_manager.o)
+                0x0000000004004034                psServerContextCopy
+ .bss.s_u32x    0x0000000004004038        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libRandom_JN516x.a(rnd_main.o)
  .bss.sPDM_Common
-                0x000000000400402c       0x64 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_Create.o)
- .bss.vResetFn  0x0000000004004090        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
- .bss.vPutchFn  0x0000000004004094        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
- .bss.vFlushFn  0x0000000004004098        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
- .bss.vStopFn   0x000000000400409c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
+                0x000000000400403c       0x64 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_Create.o)
+ .bss.vResetFn  0x00000000040040a0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
+ .bss.vPutchFn  0x00000000040040a4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
+ .bss.vFlushFn  0x00000000040040a8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
+ .bss.vStopFn   0x00000000040040ac        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
  .bss.iGetCharFn
-                0x00000000040040a0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
+                0x00000000040040b0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
  .bss.u8AhiUart
-                0x00000000040040a4        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg_uart.o)
- *fill*         0x00000000040040a5        0x3 00
+                0x00000000040040b4        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg_uart.o)
+ *fill*         0x00000000040040b5        0x3 00
  .bss.pfnLinkCost
-                0x00000000040040a8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_lkst.o)
-                0x00000000040040a8                pfnLinkCost
+                0x00000000040040b8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_lkst.o)
+                0x00000000040040b8                pfnLinkCost
  .bss.zps_psNwk
-                0x00000000040040ac        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_main.o)
-                0x00000000040040ac                zps_psNwk
+                0x00000000040040bc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_main.o)
+                0x00000000040040bc                zps_psNwk
  .bss.pfExtendedStatusCallBack
-                0x00000000040040b0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_main.o)
+                0x00000000040040c0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_main.o)
  .bss.pfConflict
-                0x00000000040040b4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
-                0x00000000040040b4                pfConflict
+                0x00000000040040c4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
+                0x00000000040040c4                pfConflict
  .bss.bNwkManagerDetectConflict
-                0x00000000040040b8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
-                0x00000000040040b8                bNwkManagerDetectConflict
- *fill*         0x00000000040040b9        0x3 00
+                0x00000000040040c8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
+                0x00000000040040c8                bNwkManagerDetectConflict
+ *fill*         0x00000000040040c9        0x3 00
  .bss.pfnptrConflict
-                0x00000000040040bc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
-                0x00000000040040bc                pfnptrConflict
+                0x00000000040040cc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
+                0x00000000040040cc                pfnptrConflict
  .bss.bCheckChild
-                0x00000000040040c0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
-                0x00000000040040c0                bCheckChild
+                0x00000000040040d0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
+                0x00000000040040d0                bCheckChild
  .bss.u16SinkDstDeviceListSize
-                0x00000000040040c4        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
-                0x00000000040040c4                u16SinkDstDeviceListSize
- *fill*         0x00000000040040c6        0x2 00
+                0x00000000040040d4        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
+                0x00000000040040d4                u16SinkDstDeviceListSize
+ *fill*         0x00000000040040d6        0x2 00
  .bss.pu16SinkDstDeviceList
-                0x00000000040040c8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
-                0x00000000040040c8                pu16SinkDstDeviceList
+                0x00000000040040d8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
+                0x00000000040040d8                pu16SinkDstDeviceList
  .bss.pu64NewMacOverrideMyAddressLocation
-                0x00000000040040cc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
-                0x00000000040040cc                pu64NewMacOverrideMyAddressLocation
+                0x00000000040040dc        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
+                0x00000000040040dc                pu64NewMacOverrideMyAddressLocation
  .bss.bSuppressPassiveAcks
-                0x00000000040040d0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
-                0x00000000040040d0                bSuppressPassiveAcks
+                0x00000000040040e0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
+                0x00000000040040e0                bSuppressPassiveAcks
  .bss.g_ZpsbForwardBroadcast
-                0x00000000040040d1        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
-                0x00000000040040d1                g_ZpsbForwardBroadcast
- *fill*         0x00000000040040d2        0x2 00
+                0x00000000040040e1        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
+                0x00000000040040e1                g_ZpsbForwardBroadcast
+ *fill*         0x00000000040040e2        0x2 00
  .bss.sLoopDetectTable
-                0x00000000040040d4       0x20 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
-                0x00000000040040d4                sLoopDetectTable
+                0x00000000040040e4       0x20 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
+                0x00000000040040e4                sLoopDetectTable
  .bss.iLoopTableIndex
-                0x00000000040040f4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
-                0x00000000040040f4                iLoopTableIndex
+                0x0000000004004104        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
+                0x0000000004004104                iLoopTableIndex
  .bss.pfOptionsFilterCallback
-                0x00000000040040f8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
-                0x00000000040040f8                pfOptionsFilterCallback
+                0x0000000004004108        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
+                0x0000000004004108                pfOptionsFilterCallback
  .bss.a16NwkPdmRecordSizes
-                0x00000000040040fc        0xc c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_nib.o)
-                0x00000000040040fc                a16NwkPdmRecordSizes
+                0x000000000400410c        0xc c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_nib.o)
+                0x000000000400410c                a16NwkPdmRecordSizes
  .bss.u8TransientIndex
-                0x0000000004004108        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_nib.o)
+                0x0000000004004118        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_nib.o)
  .bss.bSetOverrideStopRouteRecord
-                0x0000000004004109        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_rt.o)
-                0x0000000004004109                bSetOverrideStopRouteRecord
+                0x0000000004004119        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_rt.o)
+                0x0000000004004119                bSetOverrideStopRouteRecord
  .bss.u8ReplyRadius
-                0x000000000400410a        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_rt.o)
- *fill*         0x000000000400410b        0x1 00
+                0x000000000400411a        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_rt.o)
+ *fill*         0x000000000400411b        0x1 00
  .bss.sGlobalScanParams
-                0x000000000400410c        0x8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_disc.o)
-                0x000000000400410c                sGlobalScanParams
+                0x000000000400411c        0x8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_disc.o)
+                0x000000000400411c                sGlobalScanParams
  .bss.sScanAttemptTimer
-                0x0000000004004114       0x1c c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_disc.o)
-                0x0000000004004114                sScanAttemptTimer
+                0x0000000004004124       0x1c c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_disc.o)
+                0x0000000004004124                sScanAttemptTimer
  .bss.pfnRejoinRequestDecider
-                0x0000000004004130        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_join.o)
-                0x0000000004004130                pfnRejoinRequestDecider
+                0x0000000004004140        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_join.o)
+                0x0000000004004140                pfnRejoinRequestDecider
  .bss.bRxOnOptimisationTurnedOff
-                0x0000000004004134        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_join.o)
-                0x0000000004004134                bRxOnOptimisationTurnedOff
- *fill*         0x0000000004004135        0x3 00
+                0x0000000004004144        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_join.o)
+                0x0000000004004144                bRxOnOptimisationTurnedOff
+ *fill*         0x0000000004004145        0x3 00
  .bss.sStoredMacData
-                0x0000000004004138        0x8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Main.o)
+                0x0000000004004148        0x8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Main.o)
  .bss.psTimerServerList
-                0x0000000004004140        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
-                0x0000000004004140                psTimerServerList
+                0x0000000004004150        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
+                0x0000000004004150                psTimerServerList
  .bss.aprTimerCallback
-                0x0000000004004144       0x20 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
-                0x0000000004004144                aprTimerCallback
+                0x0000000004004154       0x20 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
+                0x0000000004004154                aprTimerCallback
  .bss.au32TimerCounter
-                0x0000000004004164       0x20 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
-                0x0000000004004164                au32TimerCounter
+                0x0000000004004174       0x20 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
+                0x0000000004004174                au32TimerCounter
  .bss.u32SleepIntervalInSymbols
-                0x0000000004004184        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
+                0x0000000004004194        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
  .bss.bResetScanTimer
-                0x0000000004004188        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
+                0x0000000004004198        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
  .bss.u8MiniMac_RunTimeOptions
-                0x0000000004004189        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TxRx.o)
-                0x0000000004004189                u8MiniMac_RunTimeOptions
- *fill*         0x000000000400418a        0x2 00
+                0x0000000004004199        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TxRx.o)
+                0x0000000004004199                u8MiniMac_RunTimeOptions
+ *fill*         0x000000000400419a        0x2 00
  .bss.sReversedMacAddr
-                0x000000000400418c        0x8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMacShim_JN516x.a(Mini_Shim.o)
+                0x000000000400419c        0x8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMacShim_JN516x.a(Mini_Shim.o)
  .bss.prIntHandler
-                0x0000000004004194        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
+                0x00000000040041a4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
  .bss.u8PowerAdj
-                0x0000000004004198        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
+                0x00000000040041a8        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
  .bss.u8Atten3db
-                0x0000000004004199        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
+                0x00000000040041a9        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
  .bss.u8MMAC_HpmCcaThreshold
-                0x000000000400419a        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
- *fill*         0x000000000400419b        0x1 00
+                0x00000000040041aa        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
+ *fill*         0x00000000040041ab        0x1 00
  .bss.u32PhyVCOCtrl.2409
-                0x000000000400419c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
+                0x00000000040041ac        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
  .bss.u32PhyVCOTxo.2410
-                0x00000000040041a0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
+                0x00000000040041b0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
  .bss.u32PhyTST0.2411
-                0x00000000040041a4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
+                0x00000000040041b4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
  .bss.u32PhyPACTRL.2412
-                0x00000000040041a8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
+                0x00000000040041b8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
  .bss.apu8DMAbuffer
-                0x00000000040041ac        0x8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+                0x00000000040041bc        0x8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
  .bss.gu16NumberOfSegments
-                0x00000000040041b4        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
+                0x00000000040041c4        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
  .bss.u8EEPROMinitialiseCount
-                0x00000000040041b6        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
- *fill*         0x00000000040041b7        0x1 00
+                0x00000000040041c6        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
+ *fill*         0x00000000040041c7        0x1 00
  .bss.dontinitinboot
-                0x00000000040041b8       0x40 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
-                0x00000000040041b8                isr_handlers
+                0x00000000040041c8       0x40 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libBoot_JN516x.a(ExceptionHandler.o)
+                0x00000000040041c8                isr_handlers
  .bss.pfnCallbackMcps
-                0x00000000040041f8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040041f8                pfnCallbackMcps
- .bss.u8MacNwkMaxTries
-                0x00000000040041fc        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040041fc                u8MacNwkMaxTries
- .bss.bIgnoreBroadcast
-                0x00000000040041fd        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040041fd                bIgnoreBroadcast
- .bss.u8LastRssi
-                0x00000000040041fe        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040041fe                u8LastRssi
- .bss.u8LastLqi
-                0x00000000040041ff        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040041ff                u8LastLqi
- .bss.s_hMacMutex
-                0x0000000004004200        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x0000000004004200                s_hMacMutex
- .bss.g_pvNwkHandle
-                0x0000000004004204        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x0000000004004204                g_pvNwkHandle
- .bss.g_pvAplHandle
                 0x0000000004004208        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x0000000004004208                g_pvAplHandle
- .bss.pvRxStore
-                0x000000000400420c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x000000000400420c                pvRxStore
- .bss.pvTxStore
+                0x0000000004004208                pfnCallbackMcps
+ .bss.u8MacNwkMaxTries
+                0x000000000400420c        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x000000000400420c                u8MacNwkMaxTries
+ .bss.bIgnoreBroadcast
+                0x000000000400420d        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x000000000400420d                bIgnoreBroadcast
+ .bss.u8LastRssi
+                0x000000000400420e        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x000000000400420e                u8LastRssi
+ .bss.u8LastLqi
+                0x000000000400420f        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x000000000400420f                u8LastLqi
+ .bss.s_hMacMutex
                 0x0000000004004210        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x0000000004004210                pvTxStore
+                0x0000000004004210                s_hMacMutex
+ .bss.g_pvNwkHandle
+                0x0000000004004214        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x0000000004004214                g_pvNwkHandle
+ .bss.g_pvAplHandle
+                0x0000000004004218        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x0000000004004218                g_pvAplHandle
+ .bss.pvRxStore
+                0x000000000400421c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x000000000400421c                pvRxStore
+ .bss.pvTxStore
+                0x0000000004004220        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x0000000004004220                pvTxStore
  .bss.sRxShadowBuffer
-                0x0000000004004214       0xa8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x0000000004004214                sRxShadowBuffer
- .bss.sRxFrame  0x00000000040042bc       0xa8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x00000000040042bc                sRxFrame
+                0x0000000004004224       0xa8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x0000000004004224                sRxShadowBuffer
+ .bss.sRxFrame  0x00000000040042cc       0xa8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x00000000040042cc                sRxFrame
  .bss.pasTxFrame
-                0x0000000004004364        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x0000000004004364                pasTxFrame
- .bss.prAppMcpsGetBuffer
-                0x0000000004004368        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x0000000004004368                prAppMcpsGetBuffer
- .bss.prAppMlmeGetBuffer
-                0x000000000400436c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x000000000400436c                prAppMlmeGetBuffer
- .bss.prAppMcpsCallback
-                0x0000000004004370        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x0000000004004370                prAppMcpsCallback
- .bss.prAppMlmeCallback
                 0x0000000004004374        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x0000000004004374                prAppMlmeCallback
- .bss.pfnDataReqCallback
+                0x0000000004004374                pasTxFrame
+ .bss.prAppMcpsGetBuffer
                 0x0000000004004378        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
-                0x0000000004004378                pfnDataReqCallback
- .bss.g_pu16FilterTable
+                0x0000000004004378                prAppMcpsGetBuffer
+ .bss.prAppMlmeGetBuffer
                 0x000000000400437c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
- .bss.g_pu8LinkQualityTable
+                0x000000000400437c                prAppMlmeGetBuffer
+ .bss.prAppMcpsCallback
                 0x0000000004004380        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x0000000004004380                prAppMcpsCallback
+ .bss.prAppMlmeCallback
+                0x0000000004004384        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x0000000004004384                prAppMlmeCallback
+ .bss.pfnDataReqCallback
+                0x0000000004004388        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x0000000004004388                pfnDataReqCallback
+ .bss.g_pu16FilterTable
+                0x000000000400438c        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+ .bss.g_pu8LinkQualityTable
+                0x0000000004004390        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
  .bss.s_u16FilterNumAddrs
-                0x0000000004004384        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
- *fill*         0x0000000004004386        0x2 00
+                0x0000000004004394        0x2 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+ *fill*         0x0000000004004396        0x2 00
  .bss.s_sDcfmIndMgr
-                0x0000000004004388        0x8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+                0x0000000004004398        0x8 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
  .bss.u8ScanBeaconsSeen
-                0x0000000004004390        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
- *fill*         0x0000000004004391        0x3 00
- .bss.s_hMutex  0x0000000004004394        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
+                0x00000000040043a0        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+ *fill*         0x00000000040043a1        0x3 00
+ .bss.s_hMutex  0x00000000040043a4        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
  .bss.s_prExpireFn
-                0x0000000004004398        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
+                0x00000000040043a8        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
  *(.bss.*)
  *(.scommon*)
- .scommon       0x000000000400439c        0x8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zha_outlet_node.o
-                0x000000000400439c                sDeviceDesc
-                0x00000000040043a0                sIdEffect
- .scommon       0x00000000040043a4        0x0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_zcl_outlet_task.o
- .scommon       0x00000000040043a4        0x0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_status_led.o
- .scommon       0x00000000040043a4        0x8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Basic.o
-                0x00000000040043a4                au8BasicClusterAttributeControlBits
- .scommon       0x00000000040043ac        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Groups.o
-                0x00000000040043ac                au8GroupsServerAttributeControlBits
- .scommon       0x00000000040043ad        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Identify.o
-                0x00000000040043ad                au8IdentifyServerAttributeControlBits
- .scommon       0x00000000040043ae        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/OnOff.o
-                0x00000000040043ae                au8OnOffServerAttributeControlBits
- .scommon       0x00000000040043af        0x6 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Scenes.o
-                0x00000000040043af                au8ScenesServerAttributeControlBits
- *fill*         0x00000000040043b5        0x3 00
- .scommon       0x00000000040043b8        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl.o
-                0x00000000040043b8                psZCL_Common
- .scommon       0x00000000040043bc        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
-                0x00000000040043bc                __gnu_lto_v1
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm_cold_start.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm_warm_start.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_af.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_af_apsde.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_task.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsme.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_aps_nlde.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_sec.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_aib.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_handle_zdp_event.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_trust_center.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_common.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_group.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_default_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bind_manager.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwk_addr_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_ieee_addr_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_match_desc_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_node_desc_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_simple_desc_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_power_desc_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_active_ep_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_device_annce_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_permit_joining_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_system_server_discovery_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_mgmt_lqi_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_mgmt_rtg_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_mgmt_leave_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_mgmt_nwk_update_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bind_unbind_server.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bound_data_request_manager.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager_client.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_apsde_req.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_permit_joining_req.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_nwk_addr_req.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_nwk_addr_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_ieee_addr_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_node_desc_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_power_desc_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_simple_desc_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_active_ep_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_match_desc_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_system_server_discovery_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_bind_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_unbind_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_lqi_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_rtg_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_leave_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_nwk_update_notify_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_permit_joining_rsp.o)
- .scommon       0x00000000040043bd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libRandom_JN516x.a(rnd_main.o)
- *fill*         0x00000000040043bd        0x3 00
- .scommon       0x00000000040043c0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_Create.o)
-                0x00000000040043c0                psPDM_Common
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_EEPROMsegmentStatus.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystem.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemData.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemDelete.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemGenerate.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemHeaderAccessFunctions.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemHeaderRepair.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemHeaderVerify.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemMove.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemVerify.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_ImageBitmapReconstruct.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SearchAndListOrder.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_Segment.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentData.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentReplace.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentSequenceExtendDelete.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentSequenceExtendReconstruct.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentSequenceSave.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_slist.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_WearLevelling.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_Bitmap.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_EEPROMheaderAccessFunctions.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_EEPROMheaderReadAndWrite.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_EEPROMReadAndWrite.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemHeaderChecksum.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentSequenceExtendFilter.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_EEPROM.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg_uart.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg_exceptions.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_dcim.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_lib.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_lkst.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_main.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mlme.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_nib.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_nlde.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_nlme.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_pmjn.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_rt.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_sec.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_slist.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_actv_st.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_btt.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_disc.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_disc_st.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_form_st.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_frm.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_idle_st.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_join.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_join_st.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_leave.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mac.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_scan.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_sync.o)
- .scommon       0x00000000040043c4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_form.o)
- .scommon       0x00000000040043c4       0x10 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Main.o)
-                0x00000000040043c4                sThisDeviceMacAddr
-                0x00000000040043cc                sMiniMacPhyPib
-                0x00000000040043d0                prMiniMac_u32BbcIntCallback
- .scommon       0x00000000040043d4        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Association.o)
-                0x00000000040043d4                bMiniMacConfig_DiscardUnsuccessfulAssocResponses
- .scommon       0x00000000040043d5        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Mcps.o)
-                0x00000000040043d5                bMAC_ImmortalIndirect
- *fill*         0x00000000040043d6        0x2 00
- .scommon       0x00000000040043d8        0x5 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Running.o)
-                0x00000000040043d8                prMiniMacTofRxHandler
-                0x00000000040043dc                bRadioDoze
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Scan.o)
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TxRx.o)
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Endian.o)
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Poll.o)
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMacShim_JN516x.a(Mini_Shim.o)
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC_RadioInit_JN5169.o)
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioSettings_JN5169.o)
- .scommon       0x00000000040043dd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libAes_JN516x.a(AEScoprocessorAPI.o)
- .scommon       0x00000000040043dd        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libAes_JN516x.a(AES_CCM_Star.o)
-                0x00000000040043dd                g_bLegacyHwBugEmulation
- .scommon       0x00000000040043de        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_Dio.o)
- .scommon       0x00000000040043de        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_Reset.o)
- .scommon       0x00000000040043de        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_System.o)
-                0x00000000040043de                bAHI_ExtendedTemperatureOperation
- .scommon       0x00000000040043df        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
- .scommon       0x00000000040043df        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
- .scommon       0x00000000040043df        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
- *fill*         0x00000000040043df        0x1 00
- .scommon       0x00000000040043e0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
-                0x00000000040043e0                prTickTimeAppCallback
- .scommon       0x00000000040043e4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMicroSpecific_JN516x.a(MicroInt_ba.o)
- .scommon       0x00000000040043e4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libBoot_JN516x.a(Heap.o)
- .scommon       0x00000000040043e4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
- .scommon       0x00000000040043e4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
- .scommon       0x00000000040043e4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libAES_SW_JN516x.a(aes_sw_hmac_mmo.o)
- .scommon       0x00000000040043e4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libAES_SW_JN516x.a(aes_sw_mmo.o)
- .scommon       0x00000000040043e4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_inl.o)
- .scommon       0x00000000040043e4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libAes_JN516x.a(AEScoprocessorECB.o)
+ .scommon       0x00000000040043ac        0x8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zha_outlet_node.o
+                0x00000000040043ac                sDeviceDesc
+                0x00000000040043b0                sIdEffect
+ .scommon       0x00000000040043b4        0x0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_zcl_outlet_task.o
+ .scommon       0x00000000040043b4        0x0 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/app_status_led.o
+ .scommon       0x00000000040043b4        0x8 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Basic.o
+                0x00000000040043b4                au8BasicClusterAttributeControlBits
+ .scommon       0x00000000040043bc        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Groups.o
+                0x00000000040043bc                au8GroupsServerAttributeControlBits
+ .scommon       0x00000000040043bd        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Identify.o
+                0x00000000040043bd                au8IdentifyServerAttributeControlBits
+ .scommon       0x00000000040043be        0x1 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/OnOff.o
+                0x00000000040043be                au8OnOffServerAttributeControlBits
+ .scommon       0x00000000040043bf        0x6 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/Scenes.o
+                0x00000000040043bf                au8ScenesServerAttributeControlBits
+ *fill*         0x00000000040043c5        0x3 00
+ .scommon       0x00000000040043c8        0x4 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl.o
+                0x00000000040043c8                psZCL_Common
+ .scommon       0x00000000040043cc        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libOS_JN516x.a(os.o)
+                0x00000000040043cc                __gnu_lto_v1
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm_cold_start.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPWRM_JN516x.a(pwrm_warm_start.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_nwk.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum_apl.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDUM_JN516x.a(pdum.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_af.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_af_apsde.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_task.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsde.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_apsme.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_aps_nlde.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_sec.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_aib.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_handle_zdp_event.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_trust_center.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_common.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_group.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_default_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bind_manager.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_mac_isr.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwk_addr_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_ieee_addr_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_match_desc_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_node_desc_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_simple_desc_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_power_desc_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_active_ep_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_device_annce_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_permit_joining_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_system_server_discovery_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_mgmt_lqi_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_mgmt_rtg_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_mgmt_leave_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_mgmt_nwk_update_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bind_unbind_server.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_bound_data_request_manager.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdo_nwkmanager_client.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_apsde_req.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_permit_joining_req.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_nwk_addr_req.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_nwk_addr_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_ieee_addr_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_node_desc_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_power_desc_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_simple_desc_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_active_ep_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_match_desc_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_system_server_discovery_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_bind_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_unbind_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_lqi_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_rtg_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_leave_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_nwk_update_notify_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_zdp_mgmt_permit_joining_rsp.o)
+ .scommon       0x00000000040043cd        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libRandom_JN516x.a(rnd_main.o)
+ *fill*         0x00000000040043cd        0x3 00
+ .scommon       0x00000000040043d0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_Create.o)
+                0x00000000040043d0                psPDM_Common
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_EEPROMsegmentStatus.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystem.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemData.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemDelete.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemGenerate.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemHeaderAccessFunctions.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemHeaderRepair.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemHeaderVerify.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemMove.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemVerify.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_ImageBitmapReconstruct.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SearchAndListOrder.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_Segment.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentData.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentReplace.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentSequenceExtendDelete.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentSequenceExtendReconstruct.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentSequenceSave.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_slist.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_WearLevelling.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_Bitmap.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_EEPROMheaderAccessFunctions.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_EEPROMheaderReadAndWrite.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_EEPROMReadAndWrite.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_FileSystemHeaderChecksum.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_SegmentSequenceExtendFilter.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libPDM_EEPROM_JN516x.a(PDM_EEPROM.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg_uart.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libDBG_JN516x.a(dbg_exceptions.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_dcim.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_lib.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_lkst.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_main.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_maint.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mcps.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mlme.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_nib.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_nlde.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_nlme.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_pmjn.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_rt.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_sec.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_slist.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_actv_st.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_btt.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_disc.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_disc_st.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_form_st.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_frm.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_idle_st.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_join.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_join_st.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_leave.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_mac.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_scan.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_sync.o)
+ .scommon       0x00000000040043d4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSNWK_JN516x.a(zps_nwk_form.o)
+ .scommon       0x00000000040043d4       0x10 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Main.o)
+                0x00000000040043d4                sThisDeviceMacAddr
+                0x00000000040043dc                sMiniMacPhyPib
+                0x00000000040043e0                prMiniMac_u32BbcIntCallback
+ .scommon       0x00000000040043e4        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Association.o)
+                0x00000000040043e4                bMiniMacConfig_DiscardUnsuccessfulAssocResponses
+ .scommon       0x00000000040043e5        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Mcps.o)
+                0x00000000040043e5                bMAC_ImmortalIndirect
+ *fill*         0x00000000040043e6        0x2 00
+ .scommon       0x00000000040043e8        0x5 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Running.o)
+                0x00000000040043e8                prMiniMacTofRxHandler
+                0x00000000040043ec                bRadioDoze
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Scan.o)
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TimerServer.o)
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_TxRx.o)
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Endian.o)
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Poll.o)
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMacShim_JN516x.a(Mini_Shim.o)
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC.o)
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMMAC_JN5169.a(MMAC_RadioInit_JN5169.o)
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioTxPowerTests.o)
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libJPT_JN5169.a(JPT_RadioSettings_JN5169.o)
+ .scommon       0x00000000040043ed        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libAes_JN516x.a(AEScoprocessorAPI.o)
+ .scommon       0x00000000040043ed        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libAes_JN516x.a(AES_CCM_Star.o)
+                0x00000000040043ed                g_bLegacyHwBugEmulation
+ .scommon       0x00000000040043ee        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_Dio.o)
+ .scommon       0x00000000040043ee        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_Reset.o)
+ .scommon       0x00000000040043ee        0x1 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_System.o)
+                0x00000000040043ee                bAHI_ExtendedTemperatureOperation
+ .scommon       0x00000000040043ef        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_Uart.o)
+ .scommon       0x00000000040043ef        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_WakeTimer.o)
+ .scommon       0x00000000040043ef        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(EEP_EEPROM.o)
+ *fill*         0x00000000040043ef        0x1 00
+ .scommon       0x00000000040043f0        0x4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libHardwareApi_JN5169.a(AHI_TickTimer.o)
+                0x00000000040043f0                prTickTimeAppCallback
+ .scommon       0x00000000040043f4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMicroSpecific_JN516x.a(MicroInt_ba.o)
+ .scommon       0x00000000040043f4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libBoot_JN516x.a(Heap.o)
+ .scommon       0x00000000040043f4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSMAC_Mini_JN516x.a(zps_miniMac.o)
+ .scommon       0x00000000040043f4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSTSV_JN516x.a(zps_tsv.o)
+ .scommon       0x00000000040043f4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libAES_SW_JN516x.a(aes_sw_hmac_mmo.o)
+ .scommon       0x00000000040043f4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libAES_SW_JN516x.a(aes_sw_mmo.o)
+ .scommon       0x00000000040043f4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libZPSAPL_JN516x.a(zps_apl_inl.o)
+ .scommon       0x00000000040043f4        0x0 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libAes_JN516x.a(AEScoprocessorECB.o)
  *(.scommon.*)
  *(COMMON)
- *fill*         0x00000000040043e4        0x4 00
- COMMON         0x00000000040043e8      0x570 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/App_GatewayV1asRouter.o
-                0x00000000040043e8                sOutletDevice
- COMMON         0x0000000004004958      0x190 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl.o
-                0x0000000004004958                asBindServerBufferedPDURecord
- COMMON         0x0000000004004ae8       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl_readAttributesResponseHandle.o
-                0x0000000004004ae8                uAttributeVal
- COMMON         0x0000000004004af8       0xd4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Main.o)
-                0x0000000004004af8                sMiniMacInternal
-                0x0000000004004b30                sMiniMacPib
-                0x0000000004004bcc                . = ALIGN (0x4)
-                0x0000000004004bcc                _bss_end = ABSOLUTE (.)
+ *fill*         0x00000000040043f4        0x4 00
+ COMMON         0x00000000040043f8      0x570 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/App_GatewayV1asRouter.o
+                0x00000000040043f8                sOutletDevice
+ COMMON         0x0000000004004968      0x190 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl.o
+                0x0000000004004968                asBindServerBufferedPDURecord
+ COMMON         0x0000000004004af8       0x10 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/zcl_readAttributesResponseHandle.o
+                0x0000000004004af8                uAttributeVal
+ COMMON         0x0000000004004b08       0xd4 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Library\libMiniMac_JN5169.a(Mini_Main.o)
+                0x0000000004004b08                sMiniMacInternal
+                0x0000000004004b40                sMiniMacPib
+                0x0000000004004bdc                . = ALIGN (0x4)
+                0x0000000004004bdc                _bss_end = ABSOLUTE (.)
 
-.heap           0x0000000004004bcc      0x7d0 load address 0x00000000000b48e8
-                0x0000000004004bcc                _heap_start = ABSOLUTE (.)
-                0x000000000400539c                . = (. + __minimum_heap_size)
- *fill*         0x0000000004004bcc      0x7d0 00
+.heap           0x0000000004004bdc      0x7d0 load address 0x00000000000b48f8
+                0x0000000004004bdc                _heap_start = ABSOLUTE (.)
+                0x00000000040053ac                . = (. + __minimum_heap_size)
+ *fill*         0x0000000004004bdc      0x7d0 00
 
 .stack          0x0000000004006890     0x1770 load address 0x00000000000b65ac
                 0x0000000004006890                _heap_end = ABSOLUTE (.)
@@ -17847,17 +17851,17 @@ LOAD c:/nxp/bstudio_nxp/sdk/tools/ba-elf-ba2-r36379/bin/../lib/gcc/ba-elf/4.7.4/
                 0x0000000004008000                . = (. + __stack_size)
  *fill*         0x0000000004006890     0x1770 00
 
-.test           0x00000000000b050c        0x1
-                0x00000000000b050c        0x1 BYTE 0xff
+.test           0x00000000000b0518        0x1
+                0x00000000000b0518        0x1 BYTE 0xff
                 0x00000000000afd68                _flash_data_start = LOADADDR (.data)
-                0x00000000000007a4                _ram_data_len = (((_ram_data_end - _ram_data_start) + 0x3) & 0xfffffffffffffffc)
-                0x00000000000043dc                _bss_len = (((_bss_end - _bss_start) + 0x3) & 0xfffffffffffffffc)
-                0x000000000003050c                _image_len = ((((_flash_end - _flash_start) + _ram_data_len) + 0x3) & 0xfffffffffffffffc)
+                0x00000000000007b0                _ram_data_len = (((_ram_data_end - _ram_data_start) + 0x3) & 0xfffffffffffffffc)
+                0x00000000000043e0                _bss_len = (((_bss_end - _bss_start) + 0x3) & 0xfffffffffffffffc)
+                0x0000000000030518                _image_len = ((((_flash_end - _flash_start) + _ram_data_len) + 0x3) & 0xfffffffffffffffc)
                 0x0000000004008000                _ram_top = (ABSOLUTE (ORIGIN (ram)) + 0x7fb4)
                 0x0000000004008000                ram_top = (ABSOLUTE (ORIGIN (ram)) + 0x7fb4)
                 0x0000000001001580                _app_ram_start = 0x1001580
-                0x00000000040007e0                PROVIDE (_heap_location, u32HeapStart)
-                0x00000000040007e0                PROVIDE (heap_location, u32HeapStart)
+                0x00000000040007ec                PROVIDE (_heap_location, u32HeapStart)
+                0x00000000040007ec                PROVIDE (heap_location, u32HeapStart)
 OUTPUT(c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/GatewayV1asRouter/Build/GatewayV1asRouter_JN5169_GatewayV1asRouter.elf elf32-ba)
 
 .debug_info     0x0000000000000000    0x86879
