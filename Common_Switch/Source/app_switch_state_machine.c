@@ -43,7 +43,12 @@
 
 #include "haEzFindAndBind.h"
 #include "app_switch_state_machine.h"
-#include "App_DimmerSwitch.h"
+#ifdef WXKG02LM
+    #include "App_WXKG02LM.h"
+#else
+	#include "App_DimmerSwitch.h"
+#endif
+
 #include "os_gen.h"
 /****************************************************************************/
 /***        Macro Definitions                                             ***/
@@ -517,7 +522,10 @@ PUBLIC void vApp_ProcessKeyCombination(APP_tsEvent sButton)
             DBG_vPrintf(TRACE_SWITCH_STATE, "\nDIO State    = %08x\n",sButton.uEvent.sButton.u32DIOState);
 
             eTransitionCode=sButton.uEvent.sButton.u8Button;
-
+#if (defined BUTTON_MAP_WXKG02LM)
+            if(0 == (sButton.uEvent.sButton.u32DIOState & (LEFT|RIGHT)))
+                eTransitionCode=COMM_AND_OFF_TOGETHER_PRESSED;
+#else
             if(0 == (sButton.uEvent.sButton.u32DIOState & (UP|ON)))
                     eTransitionCode=UP_AND_ON_TOGETHER_PRESSED;
 
@@ -541,6 +549,7 @@ PUBLIC void vApp_ProcessKeyCombination(APP_tsEvent sButton)
 
             if(0 == (sButton.uEvent.sButton.u32DIOState & (COMM|DOWN)))
                 eTransitionCode=COMM_AND_DOWN_TOGETHER_PRESSED;
+#endif
 
             DBG_vPrintf(TRACE_SWITCH_STATE, "\nTransition Code = %d\n",eTransitionCode);
 

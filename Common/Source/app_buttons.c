@@ -80,6 +80,15 @@
         APP_BUTTONS_BUTTON_SW1
 
     };
+#elif (defined BUTTON_MAP_WXKG02LM)
+    PRIVATE uint8 s_u8ButtonDebounce[APP_BUTTONS_NUM] = { 0xff,0xff };
+    PRIVATE uint8 s_u8ButtonState[APP_BUTTONS_NUM] = { 0,0 };
+    PRIVATE const uint8 s_u8ButtonDIOLine[APP_BUTTONS_NUM] =
+    {
+        APP_BUTTONS_BUTTON_1,
+        APP_BUTTONS_BUTTON_SW1
+
+    };
 #else
     PRIVATE uint8 s_u8ButtonDebounce[APP_BUTTONS_NUM] = { 0xff};
     PRIVATE uint8 s_u8ButtonState[APP_BUTTONS_NUM] = {0};

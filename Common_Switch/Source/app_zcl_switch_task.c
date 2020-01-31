@@ -68,7 +68,13 @@
 #include "haEzFindAndBind.h"
 
 #include "app_zcl_switch_task.h"
-#include "App_DimmerSwitch.h"
+
+#ifdef WXKG02LM
+    #include "App_WXKG02LM.h"
+#else
+	#include "App_DimmerSwitch.h"
+#endif
+
 
 
 #ifdef CLD_OTA

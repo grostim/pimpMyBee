@@ -43,6 +43,9 @@
 #include "zps_apl.h"
 #include "zps_apl_zdo.h"
 #include "app_common.h"
+#include "identify.h"
+#include "OnOff.h"
+#include "LevelControl.h"
 #include "zcl_customcommand.h"
 #ifdef PDM_EEPROM
  #include "app_pdm.h"

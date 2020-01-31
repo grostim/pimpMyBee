@@ -45,13 +45,19 @@
 /***        Macro Definitions                                             ***/
 /****************************************************************************/
 #define BUTTON_DELAY_TIME_IN_MS 250
-
-#define ON  (1 << APP_BUTTONS_BUTTON_SW3)
-#define OFF (1 << APP_BUTTONS_BUTTON_SW2 )
-#define UP (1 << APP_BUTTONS_BUTTON_SW1 )
-#define DOWN (1 << APP_BUTTONS_BUTTON_SW4 )
-#define COMM (1 << APP_BUTTONS_BUTTON_1)
-
+#if (defined BUTTON_MAP_WXKG02LM)
+	#define UP (1 << APP_BUTTONS_BUTTON_SW1 )
+	#define RIGHT (1 << APP_BUTTONS_BUTTON_SW1 )
+	#define COMM (1 << APP_BUTTONS_BUTTON_1)
+	#define LEFT (1 << APP_BUTTONS_BUTTON_1)
+#else
+    #define ON  (1 << APP_BUTTONS_BUTTON_SW3)
+	#define OFF (1 << APP_BUTTONS_BUTTON_SW2 )
+	#define UP (1 << APP_BUTTONS_BUTTON_SW1 )
+	#define DOWN (1 << APP_BUTTONS_BUTTON_SW4 )
+	#define COMM (1 << APP_BUTTONS_BUTTON_1)
+	#define LEFT (1 << APP_BUTTONS_BUTTON_1)
+#endif
 /****************************************************************************/
 /***        Type Definitions                                              ***/
 /****************************************************************************/

@@ -562,6 +562,18 @@ PRIVATE void vActionOnButtonActivationAfterDeepSleep(void)
     sButton.eType = APP_E_EVENT_NONE;
     sButton.uEvent.sButton.u32DIOState = u32DIOState;
 
+#if (defined BUTTON_MAP_WXKG02LM)
+    if ( 0 == (u32DIOState & LEFT) )
+    {
+        sButton.uEvent.sButton.u8Button=ON_PRESSED;
+        sButton.eType = APP_E_EVENT_BUTTON_DOWN;
+    }
+    else if ( 0 == (u32DIOState & RIGHT) )
+    {
+        sButton.uEvent.sButton.u8Button=OFF_PRESSED;
+        sButton.eType = APP_E_EVENT_BUTTON_DOWN;
+    }
+#else
     if ( 0 == (u32DIOState & ON) )
     {
         sButton.uEvent.sButton.u8Button=ON_PRESSED;
@@ -582,6 +594,7 @@ PRIVATE void vActionOnButtonActivationAfterDeepSleep(void)
         sButton.uEvent.sButton.u8Button=DOWN_PRESSED;
         sButton.eType = APP_E_EVENT_BUTTON_DOWN;
     }
+#endif
 
     vApp_ProcessKeyCombination(sButton);
 
