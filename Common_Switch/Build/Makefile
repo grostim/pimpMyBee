@@ -99,7 +99,7 @@ ZBPRO_DEVICE_TYPE ?= ZED
 ###############################################################################
 # Debug options define DEBUG either HW or SW
 #DEBUG ?=SW
-#DEBUG ?=HW
+DEBUG ?=HW
 #
 # Define which UART to use for HW debug
 DEBUG_PORT ?= UART0
@@ -143,18 +143,18 @@ endif
 
 ###############################################################################
 
-#CFLAGS += -DNXP_HARDWARE
-#CFLAGS += -DDEBUG_EZMODE
+CFLAGS += -DNXP_HARDWARE
+CFLAGS += -DDEBUG_EZMODE
 #CFLAGS += -DDEBUG_ZCL
-#CFLAGS += -DDEBUG_CLD_ONOFF
-#CFLAGS += -DDEBUG_APP_BUTTON
-#CFLAGS += -DDEBUG_START_UP
-#CFLAGS += -DDEBUG_SWITCH_NODE
+CFLAGS += -DDEBUG_CLD_ONOFF
+CFLAGS += -DDEBUG_APP_BUTTON
+CFLAGS += -DDEBUG_START_UP
+CFLAGS += -DDEBUG_SWITCH_NODE
 #CFLAGS += -DDEBUG_REMOTE_TASK
-#CFLAGS += -DDEBUG_SCAN
-#CFLAGS += -DDEBUG_JOIN
-#CFLAGS += -DDEBUG_COMMISSION
-#CFLAGS += -DDEBUG_SWITCH_STATE
+CFLAGS += -DDEBUG_SCAN
+CFLAGS += -DDEBUG_JOIN
+CFLAGS += -DDEBUG_COMMISSION
+CFLAGS += -DDEBUG_SWITCH_STATE
 #CFLAGS += -DDEBUG_CIRCULAR_ROUTE
 CFLAGS += -DOTA_DEMO_BUILD=TRUE
 ###############################################################################
@@ -218,7 +218,7 @@ APPSRC += appZdpExtraction.c
 
 APP_ZPSCFG = app.zpscfg
 
-BIN_SUFFIX=_$(DR)
+BIN_SUFFIX=_$(DATE_CODE)
 
 ifeq ($(OTA),1)
 BIN_SUFFIX := $(BIN_SUFFIX)_OTA

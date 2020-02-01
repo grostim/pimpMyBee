@@ -46,11 +46,11 @@ APP_SW_VERSION            	?= 7
 # Attrib: 0x0003 (UINT8)
 HW_VERSION                	?= 1
 # Attrib: 0x0004 (String - 32 bytes max)
-MANUFACTURER_NAME         	?= "PimpMyBee"
+MANUFACTURER_NAME         	?= PimpMyBee
 # Attrib: 0x0005 (String - 32 bytes max)
-MODEL_ID                  	?= "WXKG02LM"
+MODEL_ID                  	?= WXKG02LM
 # Attrib: 0x0006 (String - 16 bytes max)
-DATE_CODE                 	?= 22-01-2020
+DATE_CODE                 	:= $(shell date +'%Y%m%d')
 
 # Set the following variable to one to enable OTA client functionality on 
 # this device. In addition to changing this macro the OTA output cluster must

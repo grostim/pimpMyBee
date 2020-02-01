@@ -71,8 +71,8 @@
 	} APP_teButtons;
 
     #define APP_BUTTONS_NUM             (2UL)
-    #define APP_BUTTONS_BUTTON_1        (13)
-	#define APP_BUTTONS_BUTTON_SW1		(17)
+    #define APP_BUTTONS_BUTTON_1        (12)
+	#define APP_BUTTONS_BUTTON_SW1		(16)
     #define APP_BUTTONS_DIO_MASK        ((1 << APP_BUTTONS_BUTTON_1) | (1 << APP_BUTTONS_BUTTON_SW1))
 	#define APP_BUTTONS_DIO_MASK_FOR_DEEP_SLEEP        ((1 << APP_BUTTONS_BUTTON_SW1))
 

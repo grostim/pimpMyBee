@@ -6,7 +6,7 @@
 #
 # COMPONENT:      os_irq_stackoverflowexception.s
 #
-# DATE:           Mon Jan 27 22:32:05 2020
+# DATE:           Sat Feb  1 15:04:54 2020
 #
 # AUTHOR:         Jennic RTOS Configuration Tool
 #
