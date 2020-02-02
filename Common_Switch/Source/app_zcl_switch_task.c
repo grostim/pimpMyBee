@@ -63,7 +63,9 @@
 #include "zha_switch_node.h"
 #include "ahi_aes.h"
 #include "app_events.h"
-#include "GenericBoard.h"
+#if (defined DR1199)
+	#include "GenericBoard.h"
+#endif
 #include "ha.h"
 #include "haEzFindAndBind.h"
 
@@ -409,9 +411,23 @@ PRIVATE void APP_ZCL_cbEndpointCallback(tsZCL_CallBackEvent *psEvent)
  ****************************************************************************/
 PRIVATE void vSetThreeLeds( bool led1, bool led2, bool led4 )
 {
+#if (defined DR1199)
     vGenericLEDSetOutput(1, led1);
     vGenericLEDSetOutput(2, led2);
     vGenericLEDSetOutput(4, led4);
+#elif (defined WXKG02LM)
+    if (led1) {
+    vAHI_DioSetOutput(BOARD_LED_D1_PIN, 0);
+    } else {
+    vAHI_DioSetOutput(0, BOARD_LED_D1_PIN);
+    }
+    if (led2) {
+    vAHI_DioSetOutput(BOARD_LED_D2_PIN, 0);
+    } else {
+    vAHI_DioSetOutput(0, BOARD_LED_D2_PIN);
+    }
+    // led4 do not exist on WXKG02LM, at this stage, i'll just ignore it.
+#endif
 }
 
 /****************************************************************************/

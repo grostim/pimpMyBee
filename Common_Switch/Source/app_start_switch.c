@@ -51,7 +51,9 @@
 #include "appapi.h"
 #include "zha_switch_node.h"
 #include "app_timer_driver.h"
-#include "GenericBoard.h"
+#if (defined DR1199)
+	#include "GenericBoard.h"
+#endif
 #include "app_buttons.h"
 #include <string.h>
 #include "app_exceptions.h"
@@ -283,9 +285,15 @@ PRIVATE void vSetUpWakeUpConditions(bool_t bDeepSleep)
 
     /*Set the LED to inputs to reduce power consumption */
     /*the following pins are connected to LEDs hence drive them low*/
+#if (defined DR1199)
     vGenericLEDSetOutput(1, 0);
     vGenericLEDSetOutput(2, 0);
     vGenericLEDSetOutput(4, 0);
+#elif (defined WXKG02LM)
+    vAHI_DioSetOutput(0, BOARD_LED_D1_PIN);
+    vAHI_DioSetOutput(0, BOARD_LED_D2_PIN);
+#endif
+
 
     vAHI_DioSetDirection(APP_BUTTONS_DIO_MASK,0);   /* Set as Power Button(DIO0) as Input */
 

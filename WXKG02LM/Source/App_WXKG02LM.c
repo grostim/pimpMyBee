@@ -33,13 +33,23 @@
  *
  ****************************************************************************/
 
+
+#pragma message( "Compiling " __FILE__ )
+#pragma message( "Last modified on " __TIMESTAMP__ )
+
+
 /****************************************************************************/
 /***        Include files                                                 ***/
 /****************************************************************************/
 #include <jendefs.h>
 #include "zps_gen.h"
-#include "GenericBoard.h"
+#if (defined DR1199)
+	#include "GenericBoard.h"
+#elif (defined WXKG02LM)
+	#include "AppHardwareApi.h"
+#endif
 #include "App_WXKG02LM.h"
+#include "zha_switch_node.h"
 #include <string.h>
 
 /****************************************************************************/
@@ -92,14 +102,16 @@ void vAPP_ZCL_DeviceSpecific_Init(void)
 {
     /* Initialise the strings in Basic */
     sSwitch.sBasicServerCluster.sManufacturerName.u8Length = strlen(CONFIG_MANUFACTURER_NAME);
+#pragma message( "CONFIG_MANUFACTURER_NAME = " CONFIG_MANUFACTURER_NAME )
     memcpy(sSwitch.sBasicServerCluster.au8ManufacturerName, CONFIG_MANUFACTURER_NAME, sSwitch.sBasicServerCluster.sManufacturerName.u8Length);
     sSwitch.sBasicServerCluster.sModelIdentifier.u8Length = strlen(CONFIG_MODEL_ID);
+#pragma message( "CONFIG_MODEL_ID = " CONFIG_MODEL_ID )
     memcpy(sSwitch.sBasicServerCluster.au8ModelIdentifier, CONFIG_MODEL_ID, sSwitch.sBasicServerCluster.sModelIdentifier.u8Length);
     sSwitch.sBasicServerCluster.sDateCode.u8Length = strlen(CONFIG_DATE_CODE);
+#pragma message( "CONFIG_DATE_CODE = " CONFIG_DATE_CODE )
     memcpy(sSwitch.sBasicServerCluster.au8DateCode, CONFIG_DATE_CODE, sSwitch.sBasicServerCluster.sDateCode.u8Length);
     sSwitch.sBasicServerCluster.u8ApplicationVersion = CONFIG_APP_SW_VERSION;
     sSwitch.sBasicServerCluster.u8HardwareVersion = CONFIG_HW_VERSION;
-
 }
 /****************************************************************************
  *
@@ -132,7 +144,15 @@ PUBLIC void vAPP_ZCL_DeviceSpecific_SetIdentifyTime(uint16 u16Time)
  ****************************************************************************/
 PUBLIC void vAPP_ZCL_DeviceSpecific_UpdateIdentify(void)
 {
+#if (defined DR1199)
     vGenericLEDSetOutput(1, sSwitch.sIdentifyServerCluster.u16IdentifyTime%2);
+#elif (defined WXKG02LM)
+    if (sSwitch.sIdentifyServerCluster.u16IdentifyTime%2) {
+    vAHI_DioSetOutput(BOARD_LED_D1_PIN, 0);
+    } else {
+    vAHI_DioSetOutput(0, BOARD_LED_D1_PIN);
+    }
+#endif
 }
 /****************************************************************************
  *
@@ -149,7 +169,11 @@ PUBLIC void vAPP_ZCL_DeviceSpecific_UpdateIdentify(void)
 PUBLIC void vAPP_ZCL_DeviceSpecific_IdentifyOff(void)
 {
     vAPP_ZCL_DeviceSpecific_SetIdentifyTime(0);
+#if (defined DR1199)
     vGenericLEDSetOutput(1, 0);
+#elif (defined WXKG02LM)
+    vAHI_DioSetOutput(BOARD_LED_D1_PIN,0);
+#endif
 }
 
 /****************************************************************************/

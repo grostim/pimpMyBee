@@ -81,7 +81,6 @@ c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/WXKG02LM/Build/app_zcl_sw
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_pdm.h \
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Aes/Include/ahi_aes.h \
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_events.h \
- c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Platform/DK4/Include/GenericBoard.h \
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/haEzFindAndBind.h \
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Utilities/Include/appZdpExtraction.h \
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common_Switch/Source/app_zcl_switch_task.h \
@@ -256,8 +255,6 @@ c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_pdm.h:
 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Aes/Include/ahi_aes.h:
 
 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_events.h:
-
-c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Platform/DK4/Include/GenericBoard.h:
 
 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/haEzFindAndBind.h:
 

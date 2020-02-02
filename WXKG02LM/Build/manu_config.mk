@@ -41,14 +41,14 @@ MANUFACTURER_CODE         	?= 0x1037
 # attribute in the Basic Cluster is read. These are all optional attributes
 # and if not required can be disabled via macros in zcl_options.h 
 # Attrib: 0x0001 (UINT8)
-APP_SW_VERSION            	?= 7					 
+APP_SW_VERSION            	?= 1					 
 # TODO - Add stack version attribute ?
 # Attrib: 0x0003 (UINT8)
 HW_VERSION                	?= 1
 # Attrib: 0x0004 (String - 32 bytes max)
 MANUFACTURER_NAME         	?= PimpMyBee
 # Attrib: 0x0005 (String - 32 bytes max)
-MODEL_ID                  	?= WXKG02LM
+MODEL_ID                  	?= $(SWITCH)_PMB
 # Attrib: 0x0006 (String - 16 bytes max)
 DATE_CODE                 	:= $(shell date +'%Y%m%d')
 

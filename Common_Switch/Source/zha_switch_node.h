@@ -61,6 +61,14 @@
 #endif
 #define APP_IDENTIFY_TIME_IN_SECS    5
 #define NUMBER_DEVICE_TO_BE_DISCOVERED 5
+
+#if (defined WXKG02LM)
+	#define BOARD_LED_D1_BIT               (10)
+	#define BOARD_LED_D2_BIT               (11)
+	#define BOARD_LED_D1_PIN               (1UL << BOARD_LED_D1_BIT)
+	#define BOARD_LED_D2_PIN               (1UL << BOARD_LED_D2_BIT)
+	#define BOARD_LED_CTRL_MASK            (BOARD_LED_D1_PIN | BOARD_LED_D2_PIN)
+#endif
 /****************************************************************************/
 /***        Type Definitions                                              ***/
 /****************************************************************************/

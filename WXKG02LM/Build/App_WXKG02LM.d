@@ -21,7 +21,9 @@ c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/WXKG02LM/Build/App_WXKG02
  c:\nxp\bstudio_nxp\sdk\tools\ba-elf-ba2-r36379\bin\../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/include/machine/types.h \
  c:\nxp\bstudio_nxp\sdk\tools\ba-elf-ba2-r36379\bin\../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/include/sys/stdio.h \
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/WXKG02LM/Source/zps_gen.h \
- c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Platform/DK4/Include/GenericBoard.h \
+ c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/HardwareApi/Include/AppHardwareApi.h \
+ c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/HardwareApi/Include/AppHardwareApi_JN5169.h \
+ c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/HardwareApi/Include/AppHardwareApi_JN516x.h \
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/WXKG02LM/Source/App_WXKG02LM.h \
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Profiles/HA/Lighting/Include/dimmer_switch.h \
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Include/zcl.h \
@@ -75,6 +77,12 @@ c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/WXKG02LM/Build/App_WXKG02
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/OOSC.h \
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/Groups.h \
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/Time.h \
+ c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common_Switch/Source/zha_switch_node.h \
+ c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_common.h \
+ c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Utilities/Include/app_timer_driver.h \
+ c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/identify.h \
+ c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_pdm.h \
+ c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/PDM/Include/pdm.h \
  c:\nxp\bstudio_nxp\sdk\tools\ba-elf-ba2-r36379\bin\../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/include/string.h \
  c:\nxp\bstudio_nxp\sdk\tools\ba-elf-ba2-r36379\bin\../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/include/sys/cdefs.h \
  c:\nxp\bstudio_nxp\sdk\tools\ba-elf-ba2-r36379\bin\../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/include/sys/string.h
@@ -121,7 +129,11 @@ c:\nxp\bstudio_nxp\sdk\tools\ba-elf-ba2-r36379\bin\../lib/gcc/ba-elf/4.7.4/../..
 
 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/WXKG02LM/Source/zps_gen.h:
 
-c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Platform/DK4/Include/GenericBoard.h:
+c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/HardwareApi/Include/AppHardwareApi.h:
+
+c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/HardwareApi/Include/AppHardwareApi_JN5169.h:
+
+c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/HardwareApi/Include/AppHardwareApi_JN516x.h:
 
 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/WXKG02LM/Source/App_WXKG02LM.h:
 
@@ -228,6 +240,18 @@ c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/OOSC.h
 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/Groups.h:
 
 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/Time.h:
+
+c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common_Switch/Source/zha_switch_node.h:
+
+c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_common.h:
+
+c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/Utilities/Include/app_timer_driver.h:
+
+c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/identify.h:
+
+c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_pdm.h:
+
+c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/PDM/Include/pdm.h:
 
 c:\nxp\bstudio_nxp\sdk\tools\ba-elf-ba2-r36379\bin\../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/include/string.h:
 

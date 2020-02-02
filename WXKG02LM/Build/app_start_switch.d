@@ -78,7 +78,6 @@ c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/WXKG02LM/Build/app_start_
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/OnOff.h \
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/LevelControl.h \
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_pdm.h \
- c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Platform/DK4/Include/GenericBoard.h \
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_buttons.h \
  c:\nxp\bstudio_nxp\sdk\tools\ba-elf-ba2-r36379\bin\../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/include/string.h \
  c:\nxp\bstudio_nxp\sdk\tools\ba-elf-ba2-r36379\bin\../lib/gcc/ba-elf/4.7.4/../../../../ba-elf/include/sys/cdefs.h \
@@ -240,8 +239,6 @@ c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/OnOff.
 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/LevelControl.h:
 
 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_pdm.h:
-
-c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Platform/DK4/Include/GenericBoard.h:
 
 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_buttons.h:
 

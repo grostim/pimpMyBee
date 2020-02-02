@@ -85,7 +85,6 @@ c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/WXKG02LM/Build/zha_switch
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_zbp_utilities.h \
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_events.h \
  c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_buttons.h \
- c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Platform/DK4/Include/GenericBoard.h \
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Profiles/HA/Common/Include/ha.h \
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/Basic.h \
  c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Clusters/General/Include/Scenes.h \
@@ -271,8 +270,6 @@ c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_zbp_uti
 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_events.h:
 
 c:/NXP/bstudio_nxp/workspace/JN-AN-1189-ZigBee-HA-Demo/Common/Source/app_buttons.h:
-
-c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Platform/DK4/Include/GenericBoard.h:
 
 c:/NXP/bstudio_nxp/sdk/JN-SW-4168/Components/ZCL/Profiles/HA/Common/Include/ha.h:
 

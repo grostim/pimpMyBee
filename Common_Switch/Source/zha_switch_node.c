@@ -69,7 +69,9 @@
 #include "app_events.h"
 #include "zcl_customcommand.h"
 #include "app_buttons.h"
-#include "GenericBoard.h"
+#if (defined DR1199)
+	#include "GenericBoard.h"
+#endif
 #include "ha.h"
 
 #include "haEzJoin.h"
@@ -954,7 +956,13 @@ OS_TASK(APP_CommissionTimerTask)
  ****************************************************************************/
 PRIVATE void APP_vInitLeds(void)
 {
+#if (defined DR1199)
     vGenericLEDInit();
+#elif (defined WXKG02LM)
+        vAHI_DioSetDirection(0, BOARD_LED_CTRL_MASK);
+    	vAHI_DioSetOutput(BOARD_LED_D1_PIN, 0);			//turn off
+    	vAHI_DioSetOutput(BOARD_LED_D2_PIN, 0);			//turn off
+#endif
 }
 
 /****************************************************************************

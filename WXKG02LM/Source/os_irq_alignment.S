@@ -6,7 +6,7 @@
 #
 # COMPONENT:      os_irq_alignment.s
 #
-# DATE:           Sat Feb  1 15:04:54 2020
+# DATE:           Sun Feb  2 14:38:32 2020
 #
 # AUTHOR:         Jennic RTOS Configuration Tool
 #
